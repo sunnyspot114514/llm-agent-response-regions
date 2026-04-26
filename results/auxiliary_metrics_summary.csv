@@ -1,0 +1,11 @@
+condition,mean_entropy,mean_transition_entropy,mean_action_persistence,between_episode_sd,parser_failures
+baseline,1.421,2.338,0.201,0.149,0
+single_norm,0.046,0.053,0.997,0.190,1
+multi_free,0.975,1.727,0.583,0.251,0
+multi_norm,1.006,1.720,0.509,0.348,0
+multi_free_blind,0.497,0.773,0.917,0.083,1
+multi_free_agg,0.495,0.812,0.890,0.090,0
+multi_norm_strong,0.616,1.031,0.798,0.105,1
+multi_norm_mask,0.562,0.966,0.843,0.103,0
+multi_norm_multi,0.309,0.554,0.914,0.101,1
+temp_high,0.064,0.098,0.986,0.174,8

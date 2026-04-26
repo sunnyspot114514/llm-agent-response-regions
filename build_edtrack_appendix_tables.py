@@ -3,7 +3,10 @@ from __future__ import annotations
 import csv
 import math
 import random
+import statistics
 from pathlib import Path
+
+from analysis_utils import bootstrap_mean_ci, permutation_test_mean, summarize_experiment
 
 
 RESULTS_DIR = Path("results")
@@ -31,6 +34,50 @@ def write_markdown(path: Path, header: str, lines: list[str]) -> None:
     path.write_text("\n".join([header, "", *lines, ""]) + "\n", encoding="utf-8")
 
 
+def bootstrap_delta_ci(left: list[float], right: list[float], n_boot: int = 2000, seed: int = 42) -> tuple[float, float, float]:
+    if not left or not right:
+        return 0.0, 0.0, 0.0
+    rng = random.Random(seed)
+    observed = (sum(right) / len(right)) - (sum(left) / len(left))
+    samples: list[float] = []
+    for _ in range(n_boot):
+        left_sample = [left[rng.randrange(len(left))] for _ in range(len(left))]
+        right_sample = [right[rng.randrange(len(right))] for _ in range(len(right))]
+        samples.append((sum(right_sample) / len(right_sample)) - (sum(left_sample) / len(left_sample)))
+    samples.sort()
+    low = samples[int(0.025 * (len(samples) - 1))]
+    high = samples[int(0.975 * (len(samples) - 1))]
+    return observed, low, high
+
+
+def cliffs_delta(left: list[float], right: list[float]) -> float:
+    if not left or not right:
+        return 0.0
+    greater = 0
+    less = 0
+    for lval in left:
+        for rval in right:
+            if rval > lval:
+                greater += 1
+            elif rval < lval:
+                less += 1
+    return (greater - less) / (len(left) * len(right))
+
+
+def fdr_bh(p_values: list[float]) -> list[float]:
+    if not p_values:
+        return []
+    indexed = sorted(enumerate(p_values), key=lambda item: item[1])
+    adjusted = [1.0] * len(p_values)
+    running = 1.0
+    m = len(p_values)
+    for rank_from_end, (index, pval) in enumerate(reversed(indexed), start=1):
+        rank = m - rank_from_end + 1
+        running = min(running, pval * m / rank)
+        adjusted[index] = min(running, 1.0)
+    return adjusted
+
+
 def build_commons_transfer(summary: dict[str, dict[str, str]]) -> tuple[list[dict], list[str]]:
     families = [
         ("Qwen", "solo_qwen", "solo_qwen_exposed", "homo_qwen", "commons_solo_qwen", "commons_solo_qwen_exposed", "commons_homo_qwen"),
@@ -43,6 +90,9 @@ def build_commons_transfer(summary: dict[str, dict[str, str]]) -> tuple[list[dic
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for family, s_solo, s_scripted, s_homo, c_solo, c_scripted, c_homo in families:
+        required = [s_solo, s_scripted, s_homo, c_solo, c_scripted, c_homo]
+        if any(name not in summary for name in required):
+            continue
         row = {
             "family": family,
             "social_solo_entropy": format_float(float(summary[s_solo]["mean_entropy"])),
@@ -58,6 +108,120 @@ def build_commons_transfer(summary: dict[str, dict[str, str]]) -> tuple[list[dic
             f"{row['social_homo_entropy']} | {row['commons_solo_entropy']} | "
             f"{row['commons_scripted_entropy']} | {row['commons_homo_entropy']} |"
         )
+    if not rows:
+        md_lines.append("| subset run | missing full commons/social triplets | - | - | - | - | - |")
+    return rows, md_lines
+
+
+def build_auxiliary_metrics() -> tuple[list[dict], list[str]]:
+    experiments = [
+        "baseline",
+        "single_norm",
+        "multi_free",
+        "multi_norm",
+        "multi_free_blind",
+        "multi_free_agg",
+        "multi_norm_strong",
+        "multi_norm_mask",
+        "multi_norm_multi",
+        "temp_high",
+    ]
+    rows: list[dict] = []
+    md_lines = [
+        "| Condition | Mean H | Transition H | Persistence | Between-episode SD | Parser fails |",
+        "| --- | ---: | ---: | ---: | ---: | ---: |",
+    ]
+    for experiment in experiments:
+        summary = summarize_experiment(experiment)
+        if summary is None:
+            continue
+        episode_values = summary["episode_mean_entropies"]
+        between_episode_sd = statistics.stdev(episode_values) if len(episode_values) > 1 else 0.0
+        row = {
+            "condition": experiment,
+            "mean_entropy": format_float(summary["mean_entropy"]),
+            "mean_transition_entropy": format_float(summary["mean_transition_entropy"]),
+            "mean_action_persistence": format_float(summary["mean_action_persistence"]),
+            "between_episode_sd": format_float(between_episode_sd),
+            "parser_failures": str(summary["parser_failures"]),
+        }
+        rows.append(row)
+        md_lines.append(
+            f"| `{experiment}` | {row['mean_entropy']} | {row['mean_transition_entropy']} | "
+            f"{row['mean_action_persistence']} | {row['between_episode_sd']} | {row['parser_failures']} |"
+        )
+    return rows, md_lines
+
+
+def build_effect_sizes() -> tuple[list[dict], list[str]]:
+    contrasts = [
+        ("baseline", "single_norm", "single-agent soft norm"),
+        ("multi_free", "multi_norm", "soft norm in heterogeneous triad"),
+        ("multi_free", "multi_free_blind", "blind visibility"),
+        ("multi_free", "multi_free_agg", "aggregate visibility"),
+        ("multi_norm", "multi_norm_strong", "strong norm binding"),
+        ("multi_norm", "multi_norm_mask", "hard mask binding"),
+        ("multi_norm", "multi_norm_multi", "multi-rule binding"),
+        ("baseline", "solo_phi_exposed", "scripted transcript on Phi"),
+        ("solo_ds", "homo_ds", "DeepSeek interaction reopening"),
+    ]
+    raw_rows: list[dict] = []
+    p_values: list[float] = []
+    for left_name, right_name, label in contrasts:
+        left_summary = summarize_experiment(left_name)
+        right_summary = summarize_experiment(right_name)
+        if left_summary is None or right_summary is None:
+            continue
+        left_values = left_summary["episode_mean_entropies"]
+        right_values = right_summary["episode_mean_entropies"]
+        left_mean, _, _ = bootstrap_mean_ci(left_values)
+        right_mean, _, _ = bootstrap_mean_ci(right_values)
+        delta, delta_low, delta_high = bootstrap_delta_ci(left_values, right_values)
+        p_value = permutation_test_mean(left_values, right_values)
+        p_values.append(p_value)
+        raw_rows.append(
+            {
+                "contrast": label,
+                "left": left_name,
+                "right": right_name,
+                "left_mean_entropy": left_mean,
+                "right_mean_entropy": right_mean,
+                "delta_entropy": delta,
+                "delta_ci_low": delta_low,
+                "delta_ci_high": delta_high,
+                "cliffs_delta": cliffs_delta(left_values, right_values),
+                "permutation_p": p_value,
+            }
+        )
+
+    q_values = fdr_bh(p_values)
+    rows: list[dict] = []
+    md_lines = [
+        "| Contrast | Delta H [95% CI] | Cliff's delta | p | FDR q |",
+        "| --- | ---: | ---: | ---: | ---: |",
+    ]
+    for row, q_value in zip(raw_rows, q_values):
+        formatted = {
+            "contrast": row["contrast"],
+            "left": row["left"],
+            "right": row["right"],
+            "left_mean_entropy": format_float(row["left_mean_entropy"]),
+            "right_mean_entropy": format_float(row["right_mean_entropy"]),
+            "delta_entropy": format_float(row["delta_entropy"]),
+            "delta_ci_low": format_float(row["delta_ci_low"]),
+            "delta_ci_high": format_float(row["delta_ci_high"]),
+            "cliffs_delta": format_float(row["cliffs_delta"]),
+            "permutation_p": f"{row['permutation_p']:.4f}",
+            "fdr_q": f"{q_value:.4f}",
+        }
+        rows.append(formatted)
+        md_lines.append(
+            f"| {row['contrast']} | {formatted['delta_entropy']} "
+            f"[{formatted['delta_ci_low']}, {formatted['delta_ci_high']}] | "
+            f"{formatted['cliffs_delta']} | {formatted['permutation_p']} | {formatted['fdr_q']} |"
+        )
+    if not rows:
+        md_lines.append("| subset run | - | - | - | - |")
     return rows, md_lines
 
 
@@ -168,7 +332,50 @@ def main() -> None:
         reference_md,
     )
 
-    print("Wrote commons_transfer_summary.* and nonllm_reference_policies.*")
+    auxiliary_rows, auxiliary_md = build_auxiliary_metrics()
+    write_csv(
+        RESULTS_DIR / "auxiliary_metrics_summary.csv",
+        auxiliary_rows,
+        [
+            "condition",
+            "mean_entropy",
+            "mean_transition_entropy",
+            "mean_action_persistence",
+            "between_episode_sd",
+            "parser_failures",
+        ],
+    )
+    write_markdown(
+        RESULTS_DIR / "auxiliary_metrics_summary.md",
+        "# Auxiliary Metrics Summary",
+        auxiliary_md,
+    )
+
+    effect_rows, effect_md = build_effect_sizes()
+    write_csv(
+        RESULTS_DIR / "effect_size_summary.csv",
+        effect_rows,
+        [
+            "contrast",
+            "left",
+            "right",
+            "left_mean_entropy",
+            "right_mean_entropy",
+            "delta_entropy",
+            "delta_ci_low",
+            "delta_ci_high",
+            "cliffs_delta",
+            "permutation_p",
+            "fdr_q",
+        ],
+    )
+    write_markdown(
+        RESULTS_DIR / "effect_size_summary.md",
+        "# Effect Size Summary",
+        effect_md,
+    )
+
+    print("Wrote commons_transfer_summary.*, nonllm_reference_policies.*, auxiliary_metrics_summary.*, and effect_size_summary.*")
 
 
 if __name__ == "__main__":

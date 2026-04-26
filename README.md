@@ -6,6 +6,8 @@ This repository contains an anonymous reproducibility package for a NeurIPS 2026
 
 - Runtime code for constrained local-agent interaction experiments: `agents/`, `runtime/`, `schemas/`, `configs/`.
 - Analysis and figure builders:
+  - `analysis_utils.py`
+  - `config.py`
   - `export_data.py`
   - `build_extension_reports.py`
   - `build_edtrack_repair_addendum.py`
@@ -13,6 +15,7 @@ This repository contains an anonymous reproducibility package for a NeurIPS 2026
   - `build_response_region_map.py`
   - `build_response_framework_figure.py`
 - Canonical exported result summaries in `results/`.
+- Auxiliary metric and effect-size summaries in `results/`.
 - Representative sample logs in `logs/`.
 - Reproducibility documentation in `paper/`.
 

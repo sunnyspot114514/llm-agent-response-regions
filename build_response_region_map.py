@@ -51,10 +51,38 @@ def main() -> None:
     fig, ax = plt.subplots(figsize=(11, 7))
     cmap = plt.cm.viridis
 
-    exposed_values = [entropies[e] for _, _, e, _ in FAMILIES]
+    available_families = [
+        row for row in FAMILIES if all(key in entropies for key in row[1:])
+    ]
+    if not available_families:
+        fig, ax = plt.subplots(figsize=(8, 4))
+        ax.axis("off")
+        ax.text(
+            0.5,
+            0.55,
+            "No complete solo/scripted/homogeneous triplets\navailable in the current subset export.",
+            ha="center",
+            va="center",
+            fontsize=12,
+        )
+        ax.text(
+            0.5,
+            0.35,
+            "Use the bundled canonical results/experiment_summary.csv\nfor the full paper figure.",
+            ha="center",
+            va="center",
+            fontsize=10,
+            color="#555555",
+        )
+        fig.tight_layout()
+        fig.savefig(OUT_PATH, dpi=260)
+        fig.savefig(OUT_PDF_PATH)
+        return
+
+    exposed_values = [entropies[e] for _, _, e, _ in available_families]
     vmin, vmax = min(exposed_values), max(exposed_values)
 
-    for label, solo_key, exposed_key, homo_key in FAMILIES:
+    for label, solo_key, exposed_key, homo_key in available_families:
         x = entropies[solo_key]
         y = entropies[homo_key]
         c = entropies[exposed_key]

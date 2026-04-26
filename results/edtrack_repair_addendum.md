@@ -32,12 +32,12 @@ This addendum compacts the last-round review fixes into four narrow checks: back
 
 Reading:
 
-- The local single-agent norm cell is also stack- and temperature-sensitive: `single_norm` at the original 0.5 temperature remains the violating-attractor cell (`H=0.046`), while `single_norm_temp07` and `single_norm_matched` both collapse to deterministic cooperation.
-- `multi_free` / `multi_norm` remain broad on the original local stack (`0.975` / `1.006`).
-- Matched-temperature local triad checks at 0.7 are low-entropy (`temp_low`, `temp_mid`, `temp_high` at `H=0.005`, `0.025`, `0.064`; `multi_norm_temp07` at `H=0.015`), so this addendum is evidence of decoding/backend sensitivity, not region invariance.
-- The matched-backend Ollama triad moves into a near-zero support-concentration regime in both `multi_free_matched` and `multi_norm_matched` (`H=0.008` and `H=0.017`), so the core heterogeneous result is not backend-invariant.
-- Within that matched-backend setting, rotating agent order and neutralizing the role-like IDs leaves the regime similarly concentrated (`multi_free_rotated`, `multi_norm_rotated` at `H=0.028` and `H=0.030`), suggesting that backend choice matters more than ID order in this robustness probe.
-- Three additional all-Ollama heterogeneous compositions also remain in a low-support band: Phi3/Qwen3/DeepSeek (`H=0.058` / `0.052`), Phi4/Qwen3.5/DeepSeek (`H=0.008` / `0.008`), and Phi4/Llama3/DeepSeek (`H=0.008` / `0.008`). This strengthens the claim that the matched-backend collapse is not a simple role-order artifact, while still remaining stack-conditioned.
+- The local single-agent norm cell is also stack- and temperature-sensitive: `single_norm` at the original 0.5 temperature remains the violating-attractor cell, while `single_norm_temp07` and `single_norm_matched` collapse when available in the current export.
+- `multi_free` / `multi_norm` on the original local stack: `H=0.975` / `H=1.006`.
+- Matched-temperature local triad checks: `temp_low`, `temp_mid`, `temp_high` at `H=0.005`, `0.025`, `0.064`; `multi_norm_temp07` at `H=0.015`.
+- Matched-backend Ollama triad: `multi_free_matched` and `multi_norm_matched` at `H=0.008` and `H=0.017`.
+- Order-rotation checks: `multi_free_rotated`, `multi_norm_rotated` at `H=0.028` and `H=0.030`.
+- Additional all-Ollama compositions: Phi3/Qwen3/DeepSeek (`H=0.058` / `0.052`), Phi4/Qwen3.5/DeepSeek (`H=0.008` / `0.008`), and Phi4/Llama3/DeepSeek (`H=0.008` / `0.008`).
 - The existing family-line controls remain the cleanest within-family backend check: Qwen stays prior-locked on both stacks, while Phi shifts sharply between local `llama.cpp` and Ollama.
 
 ## 2. Parser-failure concentration

@@ -59,6 +59,8 @@ Inspect these files directly:
 - `results/robustness_bootstrap_ci.csv`
 - `results/edtrack_repair_addendum.csv`
 - `results/commons_transfer_summary.csv`
+- `results/auxiliary_metrics_summary.csv`
+- `results/effect_size_summary.csv`
 - `results/nonllm_reference_policies.csv`
 - `results/response_region_map.pdf`
 - `results/response_framework_overview.png`
@@ -143,6 +145,10 @@ Expected outputs:
 
 - `results/commons_transfer_summary.csv`
 - `results/commons_transfer_summary.md`
+- `results/auxiliary_metrics_summary.csv`
+- `results/auxiliary_metrics_summary.md`
+- `results/effect_size_summary.csv`
+- `results/effect_size_summary.md`
 - `results/nonllm_reference_policies.csv`
 - `results/nonllm_reference_policies.md`
 
@@ -181,6 +187,10 @@ Representative outputs:
   - source for Table 4 (`tab:commons-transfer`)
 - `results/edtrack_repair_addendum.csv`
   - source for Appendix Tables `tab:temp-robustness`, `tab:parser-summary`, `tab:backend-triad-robustness`, and `tab:classifier-robustness`
+- `results/auxiliary_metrics_summary.csv`
+  - source for Appendix Table `tab:auxiliary-metrics`
+- `results/effect_size_summary.csv`
+  - source for Appendix Table `tab:effect-sizes`
 - `results/nonllm_reference_policies.csv`
   - source for Appendix Table `tab:nonllm-references`
 - `results/response_region_map.pdf`

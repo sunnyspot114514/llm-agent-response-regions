@@ -4,3 +4,6 @@ pydantic==2.11.7
 matplotlib==3.10.8
 scipy==1.16.3
 llama-cpp-python==0.3.16
+PyYAML==6.0.3
+loguru==0.7.3
+requests==2.32.5

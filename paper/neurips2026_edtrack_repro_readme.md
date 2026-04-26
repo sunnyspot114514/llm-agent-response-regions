@@ -25,6 +25,10 @@ This package supports the evaluative claims in the submission. It is not a stand
 - Exported results:
   - `results/commons_transfer_summary.csv`
   - `results/commons_transfer_summary.md`
+  - `results/auxiliary_metrics_summary.csv`
+  - `results/auxiliary_metrics_summary.md`
+  - `results/effect_size_summary.csv`
+  - `results/effect_size_summary.md`
   - `results/experiment_summary.csv`
   - `results/robustness_bootstrap_ci.csv`
   - `results/edtrack_repair_addendum.csv`

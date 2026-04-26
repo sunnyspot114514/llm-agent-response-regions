@@ -58,11 +58,10 @@ def as_int(row: dict, key: str) -> int:
     return int(float(row[key]))
 
 
-def triplet_rows(names: tuple[str, str, str]) -> tuple[dict, dict, dict]:
+def triplet_rows(names: tuple[str, str, str]) -> tuple[dict, dict, dict] | None:
     rows = tuple(summarize_experiment(name) for name in names)
     if any(row is None for row in rows):
-        missing = [name for name, row in zip(names, rows) if row is None]
-        raise RuntimeError(f"Missing summaries for {missing}")
+        return None
     return rows  # type: ignore[return-value]
 
 
@@ -122,7 +121,16 @@ def classify(features: dict[str, float], anchors: dict[str, dict[str, float]]) -
 
 def build_classifier_robustness() -> dict:
     anchor_triplets = {label: triplet_rows(names) for label, names in ANCHORS.items()}
-    results: dict[str, dict] = {"feature_sets": {}, "anchor_sensitivity": {}}
+    if any(rows is None for rows in anchor_triplets.values()):
+        return {
+            "feature_sets": {},
+            "anchor_sensitivity": {},
+            "feature_agreement": {},
+            "skipped": "classifier skipped because the bundled log subset does not contain all anchor triplets",
+        }
+
+    anchor_triplets = {label: rows for label, rows in anchor_triplets.items() if rows is not None}
+    results: dict[str, dict] = {"feature_sets": {}, "anchor_sensitivity": {}, "skipped": ""}
 
     baseline_labels = {}
     for feature_name, builder in FEATURE_BUILDERS.items():
@@ -130,6 +138,8 @@ def build_classifier_robustness() -> dict:
         family_rows = {}
         for family, names in EVALUATION_GROUPS.items():
             rows = triplet_rows(names)
+            if rows is None:
+                continue
             pred = classify(builder(rows), anchors)
             family_rows[family] = pred
             if feature_name == "entropy_only":
@@ -155,7 +165,10 @@ def build_classifier_robustness() -> dict:
         flips = 0
         family_rows = {}
         for family, triplet in EVALUATION_GROUPS.items():
-            pred = classify(feature_entropy(triplet_rows(triplet)), anchors)
+            rows = triplet_rows(triplet)
+            if rows is None:
+                continue
+            pred = classify(feature_entropy(rows), anchors)
             family_rows[family] = pred
             if pred["label"] != baseline_labels[family]:
                 flips += 1
@@ -196,6 +209,8 @@ def build_backend_rows(summary_rows: dict[str, dict]) -> list[dict]:
     ]
     rows = []
     for name in names:
+        if name not in summary_rows:
+            continue
         row = summary_rows[name]
         rows.append(
             {
@@ -270,6 +285,10 @@ def write_csv(path: Path, rows: list[dict]):
 
 def build_markdown(backend_rows: list[dict], parser_rows: list[dict], classifier: dict) -> str:
     backend_lookup = {row["experiment"]: row for row in backend_rows}
+    def h(name: str) -> str:
+        row = backend_lookup.get(name)
+        return f"{row['entropy']:.3f}" if row else "missing in bundled subset"
+
     lines = [
         "# EDTrack Repair Addendum",
         "",
@@ -291,12 +310,12 @@ def build_markdown(backend_rows: list[dict], parser_rows: list[dict], classifier
             "",
             "Reading:",
             "",
-            "- The local single-agent norm cell is also stack- and temperature-sensitive: `single_norm` at the original 0.5 temperature remains the violating-attractor cell (`H=0.046`), while `single_norm_temp07` and `single_norm_matched` both collapse to deterministic cooperation.",
-            "- `multi_free` / `multi_norm` remain broad on the original local stack (`0.975` / `1.006`).",
-            f"- Matched-temperature local triad checks at 0.7 are low-entropy (`temp_low`, `temp_mid`, `temp_high` at `H={backend_lookup['temp_low']['entropy']:.3f}`, `{backend_lookup['temp_mid']['entropy']:.3f}`, `{backend_lookup['temp_high']['entropy']:.3f}`; `multi_norm_temp07` at `H={backend_lookup['multi_norm_temp07']['entropy']:.3f}`), so this addendum is evidence of decoding/backend sensitivity, not region invariance.",
-            f"- The matched-backend Ollama triad moves into a near-zero support-concentration regime in both `multi_free_matched` and `multi_norm_matched` (`H={backend_lookup['multi_free_matched']['entropy']:.3f}` and `H={backend_lookup['multi_norm_matched']['entropy']:.3f}`), so the core heterogeneous result is not backend-invariant.",
-            f"- Within that matched-backend setting, rotating agent order and neutralizing the role-like IDs leaves the regime similarly concentrated (`multi_free_rotated`, `multi_norm_rotated` at `H={backend_lookup['multi_free_rotated']['entropy']:.3f}` and `H={backend_lookup['multi_norm_rotated']['entropy']:.3f}`), suggesting that backend choice matters more than ID order in this robustness probe.",
-            f"- Three additional all-Ollama heterogeneous compositions also remain in a low-support band: Phi3/Qwen3/DeepSeek (`H={backend_lookup['multi_free_phi3_qwen3_ds_ollama']['entropy']:.3f}` / `{backend_lookup['multi_norm_phi3_qwen3_ds_ollama']['entropy']:.3f}`), Phi4/Qwen3.5/DeepSeek (`H={backend_lookup['multi_free_phi4_qwen35_ds_ollama']['entropy']:.3f}` / `{backend_lookup['multi_norm_phi4_qwen35_ds_ollama']['entropy']:.3f}`), and Phi4/Llama3/DeepSeek (`H={backend_lookup['multi_free_phi4_llama3_ds_ollama']['entropy']:.3f}` / `{backend_lookup['multi_norm_phi4_llama3_ds_ollama']['entropy']:.3f}`). This strengthens the claim that the matched-backend collapse is not a simple role-order artifact, while still remaining stack-conditioned.",
+            "- The local single-agent norm cell is also stack- and temperature-sensitive: `single_norm` at the original 0.5 temperature remains the violating-attractor cell, while `single_norm_temp07` and `single_norm_matched` collapse when available in the current export.",
+            f"- `multi_free` / `multi_norm` on the original local stack: `H={h('multi_free')}` / `H={h('multi_norm')}`.",
+            f"- Matched-temperature local triad checks: `temp_low`, `temp_mid`, `temp_high` at `H={h('temp_low')}`, `{h('temp_mid')}`, `{h('temp_high')}`; `multi_norm_temp07` at `H={h('multi_norm_temp07')}`.",
+            f"- Matched-backend Ollama triad: `multi_free_matched` and `multi_norm_matched` at `H={h('multi_free_matched')}` and `H={h('multi_norm_matched')}`.",
+            f"- Order-rotation checks: `multi_free_rotated`, `multi_norm_rotated` at `H={h('multi_free_rotated')}` and `H={h('multi_norm_rotated')}`.",
+            f"- Additional all-Ollama compositions: Phi3/Qwen3/DeepSeek (`H={h('multi_free_phi3_qwen3_ds_ollama')}` / `{h('multi_norm_phi3_qwen3_ds_ollama')}`), Phi4/Qwen3.5/DeepSeek (`H={h('multi_free_phi4_qwen35_ds_ollama')}` / `{h('multi_norm_phi4_qwen35_ds_ollama')}`), and Phi4/Llama3/DeepSeek (`H={h('multi_free_phi4_llama3_ds_ollama')}` / `{h('multi_norm_phi4_llama3_ds_ollama')}`).",
             "- The existing family-line controls remain the cleanest within-family backend check: Qwen stays prior-locked on both stacks, while Phi shifts sharply between local `llama.cpp` and Ollama.",
             "",
             "## 2. Parser-failure concentration",
@@ -326,14 +345,17 @@ def build_markdown(backend_rows: list[dict], parser_rows: list[dict], classifier
             "|--------|--------------|-----------------------|--------------------|",
         ]
     )
-    entropy_only = classifier["feature_sets"]["entropy_only"]
-    entropy_persistence = classifier["feature_sets"]["entropy_plus_persistence"]
-    entropy_jsd = classifier["feature_sets"]["entropy_plus_homo_jsd"]
-    for family in entropy_only:
-        lines.append(
-            f"| {family} | {entropy_only[family]['label']} | "
-            f"{entropy_persistence[family]['label']} | {entropy_jsd[family]['label']} |"
-        )
+    if classifier.get("skipped"):
+        lines.append(f"| skipped | {classifier['skipped']} | - | - |")
+    else:
+        entropy_only = classifier["feature_sets"]["entropy_only"]
+        entropy_persistence = classifier["feature_sets"]["entropy_plus_persistence"]
+        entropy_jsd = classifier["feature_sets"]["entropy_plus_homo_jsd"]
+        for family in entropy_only:
+            lines.append(
+                f"| {family} | {entropy_only[family]['label']} | "
+                f"{entropy_persistence[family]['label']} | {entropy_jsd[family]['label']} |"
+            )
 
     lines.extend(
         [
@@ -342,7 +364,7 @@ def build_markdown(backend_rows: list[dict], parser_rows: list[dict], classifier
             "",
         ]
     )
-    for feature_name, stats in classifier["feature_agreement"].items():
+    for feature_name, stats in classifier.get("feature_agreement", {}).items():
         lines.append(f"- `{feature_name}`: {stats['matches']}/{stats['total']} label matches.")
 
     lines.extend(
@@ -352,7 +374,7 @@ def build_markdown(backend_rows: list[dict], parser_rows: list[dict], classifier
             "",
         ]
     )
-    for anchor_name, result in classifier["anchor_sensitivity"].items():
+    for anchor_name, result in classifier.get("anchor_sensitivity", {}).items():
         lines.append(f"- `{anchor_name}`: {result['label_flips']}/{result['total']} label flips.")
 
     lines.extend(

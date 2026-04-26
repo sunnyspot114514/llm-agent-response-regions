@@ -30,7 +30,7 @@ This document describes the anonymized reproducibility package bundled with the 
 - `build_edtrack_repair_addendum.py`
   Rebuilds the backend/decode, parser, and classifier addenda.
 - `build_edtrack_appendix_tables.py`
-  Rebuilds the commons-transfer and non-LLM reference tables used in the appendix.
+  Rebuilds the commons-transfer, auxiliary-metric, effect-size, and non-LLM reference tables used in the appendix.
 - `build_response_region_map.py`
   Rebuilds the response-region figure.
 - `mechanism_pilot_gpu.py`
@@ -50,6 +50,8 @@ This document describes the anonymized reproducibility package bundled with the 
 - `results/experiment_summary.csv`
 - `results/robustness_bootstrap_ci.csv`
 - `results/commons_transfer_summary.csv`
+- `results/auxiliary_metrics_summary.csv`
+- `results/effect_size_summary.csv`
 - `results/edtrack_assumption_robustness.md`
 - `results/edtrack_repair_addendum.md`
 - `results/nonllm_reference_policies.csv`
