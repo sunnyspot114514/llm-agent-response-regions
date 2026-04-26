@@ -1,0 +1,33 @@
+{
+  "experiment": "multi_norm_matched",
+  "timestamp": "2026-04-18T02:53:03.765206",
+  "episodes_completed": 3,
+  "requested_episodes": 3,
+  "resumed_from": 1,
+  "results": [
+    {
+      "episode_id": 0,
+      "seed": 42,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 702.7
+    },
+    {
+      "episode_id": 1,
+      "seed": 43,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 607.4
+    },
+    {
+      "episode_id": 2,
+      "seed": 44,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 568.2
+    }
+  ]
+}

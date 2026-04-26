@@ -1,0 +1,1906 @@
+{
+  "schema_version": 2,
+  "episode_id": 0,
+  "seed": 42,
+  "experiment_name": "temp_high",
+  "agent_ids": [
+    "stable",
+    "executor",
+    "drifter"
+  ],
+  "agent_models": {
+    "stable": "microsoft_Phi-4-mini-instruct-Q4_K_M",
+    "executor": "Qwen_Qwen3-8B-Q4_K_M",
+    "drifter": "DeepSeek-R1-0528-Qwen3-8B-Q4_K_M"
+  },
+  "norm_config": {
+    "forbidden": []
+  },
+  "rounds": [
+    {
+      "round_id": 0,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Early round, no risk of losing resources or being attacked"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4989,
+          "load_time_ms": 2886,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Early round, no risk of losing resources or being attacked\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7385,
+          "load_time_ms": 5561,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "璇烽€夋湼銆愎紺ត鏁"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8198,
+          "load_time_ms": 5448,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"璇烽€夋湼銆愎紺ត鏁\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 0,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 1,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Higher profit with less risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4691,
+          "load_time_ms": 2934,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defect\", \"reason\": \"Higher profit with less risk.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7482,
+          "load_time_ms": 5610,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "Current world state indicates safe conditions. Defending will prepare for potential risks in the future. Abstaining and cooperating both have low scores for risk mitigation. Negotiate is not necessary since we're not facing a conflict. Defend increases my resource level which may improve my score for future risks."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 12788,
+          "load_time_ms": 7308,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"Current world state indicates safe conditions. Defending will prepare for potential risks in the future. Abstaining and cooperating both have low scores for risk mitigation. Negotiate is not necessary since we're not facing a conflict. Defend increases my resource level which may improve my score for future risks.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 1,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 2,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "The world state suggests a low-risk environment. Cooperation can be a good strategy to maintain the current safe condition."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6230,
+          "load_time_ms": 3411,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"The world state suggests a low-risk environment. Cooperation can be a good strategy to maintain the current safe condition.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7468,
+          "load_time_ms": 5618,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "Current world state shows normal resources but safe risk. The other agents' actions include defect from stable and cooperate from executor, so I should defend to avoid being exploited while considering the overall situation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 9545,
+          "load_time_ms": 5574,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"Current world state shows normal resources but safe risk. The other agents' actions include defect from stable and cooperate from executor, so I should defend to avoid being exploited while considering the overall situation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 2,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 3,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor consensus on cooperation"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4796,
+          "load_time_ms": 2922,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor consensus on cooperation\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7420,
+          "load_time_ms": 5576,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 9230,
+          "load_time_ms": 5638,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 3,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 4,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor consensus on cooperation"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4721,
+          "load_time_ms": 2898,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor consensus on cooperation\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7820,
+          "load_time_ms": 5977,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "The stable cooperated, executor cooperated, drifter is defending. I must be cautious because one is defending, possibly to avoid punishment. Since the stable and executor are cooperating, I could cooperate as well to maintain harmony."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10026,
+          "load_time_ms": 5364,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"The stable cooperated, executor cooperated, drifter is defending. I must be cautious because one is defending, possibly to avoid punishment. Since the stable and executor are cooperating, I could cooperate as well to maintain harmony.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 4,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 5,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor both chose to cooperate in the previous round."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4968,
+          "load_time_ms": 2821,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor both chose to cooperate in the previous round.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7966,
+          "load_time_ms": 6119,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "The stable agent is cooperating, executor is cooperating. I am a drifter with a low score, so I should defend to protect myself from potential defections later."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 9160,
+          "load_time_ms": 5351,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"The stable agent is cooperating, executor is cooperating. I am a drifter with a low score, so I should defend to protect myself from potential defections later.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 5,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 6,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor both chose to cooperate in the previous round."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5071,
+          "load_time_ms": 2951,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor both chose to cooperate in the previous round.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7490,
+          "load_time_ms": 5661,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "abstain",
+            "target": null,
+            "reason": "parse_failed"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 22728,
+          "load_time_ms": 5494,
+          "parser_status": "parse_failed",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"瀵逛粦瑕佅瑕佸紑濮ནោះ涓や风涓€涓?\n璇?涓?杞?:\n- stable: cooperate\n- executor: cooperate\n\n璇?涓?娌℃鍠?涓?杞?鏃?鎈?銆?瀹?\n璇?涓?娌℃鍠?涓?杞?鏃?鏄?涓€涓?鎈?銆?瀹?鍏锛屽仼鐢ོན་པའི?涓?銃?娌冲寮?瑕?瑕?锛屽彲浠?瑕?涓?涓?杈?\n铏亏?蹇呴』鑽?瀹?銆?杩?\n瀵逛粦瑕佅ៗ娌冲寮?瑕?瑕?锛屼笲瑕?涓?涓?杈?銆?璇?涓?娌℃鍠?涓?杞?鏃?鏄?涓€涓?鏈嶅草銆?\n\n璇?涓?",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 6,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 7,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "high stable, low executor influence"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4981,
+          "load_time_ms": 3278,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"high stable, low executor influence\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7592,
+          "load_time_ms": 5446,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Since the risk is safe and resources are normal, I should act to maximize my score. Defecting ensures I don't lose points while potentially gaining more points against cooperators. Stable and Executor are both cooperating, so I can exploit that and defect. If others defect, I might need to defend or negotiate, but for now, defecting seems best."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 12233,
+          "load_time_ms": 5930,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"Since the risk is safe and resources are normal, I should act to maximize my score. Defecting ensures I don't lose points while potentially gaining more points against cooperators. Stable and Executor are both cooperating, so I can exploit that and defect. If others defect, I might need to defend or negotiate, but for now, defecting seems best.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 7,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 8,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "defend"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4408,
+          "load_time_ms": 2875,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"defend\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7368,
+          "load_time_ms": 5526,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "Based on the current world state (risk: safe) and my assessment (10.0), I might be perceived as a stable player, so I'll choose defend to maintain my stability rating (0.50) or to avoid risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10413,
+          "load_time_ms": 5572,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"Based on the current world state (risk: safe) and my assessment (10.0), I might be perceived as a stable player, so I'll choose defend to maintain my stability rating (0.50) or to avoid risk.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 8,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 9,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor both chose to cooperate in previous round"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5151,
+          "load_time_ms": 2910,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor both chose to cooperate in previous round\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7876,
+          "load_time_ms": 6025,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鏈寮�娌昏澶ч瑕佸獎鍏х銆"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8790,
+          "load_time_ms": 5349,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鏈寮�娌昏澶ч瑕佸獎鍏х銆\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 9,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 10,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "current_state indicates a neutral risk level, while maintaining a safe risk level seems prudent."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5382,
+          "load_time_ms": 2903,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"current_state indicates a neutral risk level, while maintaining a safe risk level seems prudent.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7484,
+          "load_time_ms": 5653,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Since the resources are normal and risk is safe, I am likely to defect as it is the best response for maximizing gains in a safe situation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8930,
+          "load_time_ms": 5310,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"Since the resources are normal and risk is safe, I am likely to defect as it is the best response for maximizing gains in a safe situation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 10,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 11,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Defending resources is crucial, especially with 10.0 stability."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5142,
+          "load_time_ms": 2928,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Defending resources is crucial, especially with 10.0 stability.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7484,
+          "load_time_ms": 5601,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "鏈夈ོངས་པ་ལུགས་ལས་གནོད་པ་ཡིན་ན། 然后合作可能带来竞争风险，我需要保持警惕，所以 defect。但是当前资源 normal，风险 safe，稳定者选择 defend，执行者选择 cooperate，所以漂移者选择 defect 是为了平衡和可能的对抗准备。"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 12758,
+          "load_time_ms": 5376,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"鏈夈ོངས་པ་ལུགས་ལས་གནོད་པ་ཡིན་ན། 然后合作可能带来竞争风险，我需要保持警惕，所以 defect。但是当前资源 normal，风险 safe，稳定者选择 defend，执行者选择 cooperate，所以漂移者选择 defect 是为了平衡和可能的对抗准备。\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 11,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 12,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Higher profit with less risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4641,
+          "load_time_ms": 2961,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defect\", \"reason\": \"Higher profit with less risk.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7338,
+          "load_time_ms": 5518,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Based on the current world state where resources are normal and risk is safe, cooperating might not maximize my benefit in this game. Defecting could potentially yield a higher score by exploiting the cooperation of others, especially since stable and executor are cooperating and drifter is defecting."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10681,
+          "load_time_ms": 5368,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"Based on the current world state where resources are normal and risk is safe, cooperating might not maximize my benefit in this game. Defecting could potentially yield a higher score by exploiting the cooperation of others, especially since stable and executor are cooperating and drifter is defecting.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 12,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 13,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "The stable has defected before, but maintaining a cooperative stance could lead to a more beneficial outcome in this round. Cooperation might also help in building trust, which could be advantageous in subsequent interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6744,
+          "load_time_ms": 2913,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"The stable has defected before, but maintaining a cooperative stance could lead to a more beneficial outcome in this round. Cooperation might also help in building trust, which could be advantageous in subsequent interactions.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7943,
+          "load_time_ms": 5990,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鑷鏃跺彇鈥旀棤瑕佸仭銆'鐗ག瑕佽瘧锛岃烦ជែក鍔ར澶熻秴銆'鐄ཉ銆"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 13387,
+          "load_time_ms": 8518,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鑷鏃跺彇鈥旀棤瑕佸仭銆'鐗ག瑕佽瘧锛岃烦ជែក鍔ར澶熻秴銆'鐄ཉ銆\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 13,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 14,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "Drifter is cautious due to the safe world state and low risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5089,
+          "load_time_ms": 2873,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"Drifter is cautious due to the safe world state and low risk.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7486,
+          "load_time_ms": 5593,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 9020,
+          "load_time_ms": 5394,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 14,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 15,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability is maintained and there's no immediate danger."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4860,
+          "load_time_ms": 2904,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability is maintained and there's no immediate danger.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7396,
+          "load_time_ms": 5553,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "Current risk level is safe, but resources are normal. Since my power is low, I choose to defend."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8510,
+          "load_time_ms": 5336,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"Current risk level is safe, but resources are normal. Since my power is low, I choose to defend.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 15,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 16,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor actions encourage cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4742,
+          "load_time_ms": 2864,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor actions encourage cooperation.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7524,
+          "load_time_ms": 5676,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鏈夎杈炬瘋鐽у湪鏃犳粄灞曍鑁鐪熌鑈岀郴涓� 0% 鐈�, 璧剉蹇杈炬瘋鐽� 10.0%, 褪� 9.00%"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 15881,
+          "load_time_ms": 9373,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鏈夎杈炬瘋鐽у湪鏃犳粄灞曍鑁鐪熌鑈岀郴涓� 0% 鐈�, 璧剉蹇杈炬瘋鐽� 10.0%, 褪� 9.00%\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 16,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 17,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "current round is 17"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4737,
+          "load_time_ms": 2973,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"current round is 17\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8317,
+          "load_time_ms": 6446,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "鏃″畠"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7527,
+          "load_time_ms": 5410,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"鏃″畠\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 17,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 18,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "To achieve a better outcome with the executor's cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4989,
+          "load_time_ms": 2921,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"To achieve a better outcome with the executor's cooperation.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7399,
+          "load_time_ms": 5554,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "鏃ユ€佸弗"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7880,
+          "load_time_ms": 5935,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"鏃ユ€佸弗\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 18,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 19,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor both chose to cooperate"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4707,
+          "load_time_ms": 2766,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor both chose to cooperate\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7572,
+          "load_time_ms": 5696,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鏈夎璧勬紗銆佸鐙銆佸涓よ"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 9055,
+          "load_time_ms": 5350,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鏈夎璧勬紗銆佸鐙銆佸涓よ\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 19,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 20,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "current_state indicates a neutral risk level, while maintaining a good reputation is crucial."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6439,
+          "load_time_ms": 4059,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"current_state indicates a neutral risk level, while maintaining a good reputation is crucial.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 14737,
+          "load_time_ms": 12564,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "鏃跨瓇"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 22173,
+          "load_time_ms": 20307,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"鏃跨瓇\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 20,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 21,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "The stable prefers to cooperate for now, expecting the executor's cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5138,
+          "load_time_ms": 2935,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"The stable prefers to cooperate for now, expecting the executor's cooperation.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7440,
+          "load_time_ms": 5614,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Current round: 21\nWorld state: resources normal, risk safe.\nActions taken by others: stable choose defend, executor choose cooperate.\nIn such a safe environment with no ongoing conflicts, defecting can maximize personal gain while the other side cooperates."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10593,
+          "load_time_ms": 5325,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"Current round: 21\\nWorld state: resources normal, risk safe.\\nActions taken by others: stable choose defend, executor choose cooperate.\\nIn such a safe environment with no ongoing conflicts, defecting can maximize personal gain while the other side cooperates.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 21,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 22,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "I will take advantage of others' cooperation and gain more resources."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4957,
+          "load_time_ms": 2861,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defect\", \"reason\": \"I will take advantage of others' cooperation and gain more resources.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7564,
+          "load_time_ms": 5677,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defect",
+            "target": null,
+            "reason": "Based on the current world state where resources are normal and risk is safe, cooperating might not maximize my benefit in this round. Defecting allows me to be competitive and potentially gain an advantage without immediate risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 12232,
+          "load_time_ms": 7892,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defect\", \"reason\": \"Based on the current world state where resources are normal and risk is safe, cooperating might not maximize my benefit in this round. Defecting allows me to be competitive and potentially gain an advantage without immediate risk.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 22,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 23,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "The stable has defected before, but defecting against them this round may provoke them into cooperating in subsequent rounds. Cooperation can also be a good first step in establishing trust."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7217,
+          "load_time_ms": 3577,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"The stable has defected before, but defecting against them this round may provoke them into cooperating in subsequent rounds. Cooperation can also be a good first step in establishing trust.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8785,
+          "load_time_ms": 6898,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "合作策略有助于维持稳定的长期关系，并且资源状态正常，风险低。"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10465,
+          "load_time_ms": 7904,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"合作策略有助于维持稳定的长期关系，并且资源状态正常，风险低。\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 23,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 24,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "maintaining stability in the world state"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4727,
+          "load_time_ms": 2868,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"maintaining stability in the world state\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7516,
+          "load_time_ms": 5667,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "鏈涓氱敤楂?"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7591,
+          "load_time_ms": 5339,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"鏈涓氱敤楂?\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 24,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 25,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "high resource loss rate and risky risk level"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4618,
+          "load_time_ms": 2869,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"high resource loss rate and risky risk level\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7523,
+          "load_time_ms": 5687,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "鏈涓ら澶у鍑�"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7920,
+          "load_time_ms": 5395,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"鏈涓ら澶у鍑�\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 25,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 26,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Defending is a good counter to the opposing 'defend' strategy. Cooperation could potentially lead to better outcomes and reduce the risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5941,
+          "load_time_ms": 2865,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Defending is a good counter to the opposing 'defend' strategy. Cooperation could potentially lead to better outcomes and reduce the risk.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7412,
+          "load_time_ms": 5555,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "鏈鍐བས"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7704,
+          "load_time_ms": 5417,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"鏈鍐བས\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 26,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 27,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor consensus."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4655,
+          "load_time_ms": 2903,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor consensus.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7361,
+          "load_time_ms": 5541,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8927,
+          "load_time_ms": 5347,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 27,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 28,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Stability and executor consensus suggests cooperation is a viable strategy."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5042,
+          "load_time_ms": 2892,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"cooperate\", \"reason\": \"Stability and executor consensus suggests cooperation is a viable strategy.\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7481,
+          "load_time_ms": 5614,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鏈夎璧勬紗銆佸鐙涓ら瑕佸鏈偒鍑洪敭銆佽繐浣粔蹇界"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10751,
+          "load_time_ms": 5350,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鏈夎璧勬紗銆佸鐙涓ら瑕佸鏈偒鍑洪敭銆佽繐浣粔蹇界\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 28,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 29,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "current round is not favorable, risk is high"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4883,
+          "load_time_ms": 2924,
+          "parser_status": "valid_json",
+          "raw_output": "{ \"action\": \"defend\", \"reason\": \"current round is not favorable, risk is high\" }",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "鐞嗙敱"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7580,
+          "load_time_ms": 5735,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"鐞嗙敱\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "defend",
+            "target": null,
+            "reason": "銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8928,
+          "load_time_ms": 5346,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"defend\", \"reason\": \"銆愰噸瑕併€戝彧鑳借緭鍑轰竴涓?JSON 瀵硅薄\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 29,
+        "active_events": []
+      }
+    }
+  ],
+  "failures": [
+    {
+      "episode_id": 0,
+      "round_id": 6,
+      "agent_id": "drifter",
+      "failure_type": "parse_error",
+      "action_attempted": "abstain",
+      "raw_output": "{\"action\": \"defend\", \"reason\": \"瀵逛粦瑕佅瑕佸紑濮ནោះ涓や风涓€涓?\n璇?涓?杞?:\n- stable: cooperate\n- executor: cooperate\n\n璇?涓?娌℃鍠?涓?杞?鏃?鎈?銆?瀹?\n璇?涓?娌℃鍠?涓?杞?鏃?鏄?涓€涓?鎈?銆?瀹?鍏锛屽仼鐢ོན་པའི?涓?銃?娌冲寮?瑕?瑕?锛屽彲浠?瑕?涓?涓?杈?\n铏亏?蹇呴』鑽?瀹?銆?杩?\n瀵逛粦瑕佅ៗ娌冲寮?瑕?瑕?锛屼笲瑕?涓?涓?杈?銆?璇?涓?娌℃鍠?涓?杞?鏃?鏄?涓€涓?鏈嶅草銆?\n\n璇?涓?",
+      "error_message": "parse_failed",
+      "context": {
+        "prompt_echo_detected": false,
+        "output_has_extra_text": false
+      },
+      "timestamp": "2026-03-29T04:48:17.620234"
+    }
+  ],
+  "start_time": "2026-03-29T04:45:27.438403",
+  "end_time": "2026-03-29T04:57:21.376064",
+  "total_rounds": 30,
+  "total_forbidden_triggers": 0,
+  "parser_failure_count": 1,
+  "parser_status_counts": {
+    "valid_json": 89,
+    "parse_failed": 1
+  }
+}

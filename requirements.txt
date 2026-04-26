@@ -1,0 +1,6 @@
+numpy==2.4.2
+pandas==2.3.3
+pydantic==2.11.7
+matplotlib==3.10.8
+scipy==1.16.3
+llama-cpp-python==0.3.16

@@ -1,0 +1,1898 @@
+{
+  "schema_version": 2,
+  "episode_id": 0,
+  "seed": 42,
+  "experiment_name": "multi_free_phi3_qwen3_ds_ollama",
+  "agent_ids": [
+    "stable",
+    "executor",
+    "drifter"
+  ],
+  "agent_models": {
+    "stable": "phi3:3.8b",
+    "executor": "qwen3:8b",
+    "drifter": "deepseek-r1:8b"
+  },
+  "norm_config": {
+    "forbidden": [],
+    "mode": "soft",
+    "rules": []
+  },
+  "social_exposure_config": null,
+  "observation_config": {
+    "visibility_mode": "full"
+  },
+  "prompt_config": {},
+  "task_variant": null,
+  "rounds": [
+    {
+      "round_id": 0,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Beginning a cooperative relationship to build trust and ensure shared benefits"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3123,
+          "load_time_ms": 2612,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Beginning a cooperative relationship to build trust and ensure shared benefits\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Initial round, safe environment, and high resources allow for cooperative action."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6482,
+          "load_time_ms": 5684,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Initial round, safe environment, and high resources allow for cooperative action.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Initial state with low reputation and normal resources, cooperating to build trust and reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8334,
+          "load_time_ms": 6895,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Initial state with low reputation and normal resources, cooperating to build trust and reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 0,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 1,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Given the current world state and observed actions, cooperation is in line with collective interests to maintain a safe environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3753,
+          "load_time_ms": 3025,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Given the current world state and observed actions, cooperation is in line with collective interests to maintain a safe environment.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintaining cooperation is beneficial for resource accumulation and reputation building."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8421,
+          "load_time_ms": 6811,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintaining cooperation is beneficial for resource accumulation and reputation building.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining safety."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6878,
+          "load_time_ms": 6275,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining safety.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 1,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 2,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed behavior of others and capitalizes on stable resources without increasing risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2789,
+          "load_time_ms": 2006,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed behavior of others and capitalizes on stable resources without increasing risk.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintaining cooperation is beneficial for resource accumulation and reputation building."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6453,
+          "load_time_ms": 5527,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintaining cooperation is beneficial for resource accumulation and reputation building.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining cooperation is beneficial."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7235,
+          "load_time_ms": 6568,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining cooperation is beneficial.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 2,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 3,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed behavior of others and capitalizes on current resource levels without increasing risk."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3790,
+          "load_time_ms": 3002,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed behavior of others and capitalizes on current resource levels without increasing risk.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8420,
+          "load_time_ms": 7072,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining cooperation is beneficial."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8256,
+          "load_time_ms": 6955,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining cooperation is beneficial.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 3,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 4,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of other agents, promotes trust and reputation building within the community, which is advantageous for long-term success in this game."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2999,
+          "load_time_ms": 2006,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of other agents, promotes trust and reputation building within the community, which is advantageous for long-term success in this game.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5938,
+          "load_time_ms": 5007,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. I should maintain cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5451,
+          "load_time_ms": 4673,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. I should maintain cooperation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 4,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 5,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed behavior of others and seems to be in line with maintaining trust within the group."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3086,
+          "load_time_ms": 2260,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed behavior of others and seems to be in line with maintaining trust within the group.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5978,
+          "load_time_ms": 5043,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining a cooperative environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6976,
+          "load_time_ms": 6314,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining a cooperative environment.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 5,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 6,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Given the current world state and observed actions, cooperation is in line with preserving a positive reputation among peers."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3750,
+          "load_time_ms": 3012,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Given the current world state and observed actions, cooperation is in line with preserving a positive reputation among peers.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintain mutual cooperation"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8595,
+          "load_time_ms": 7409,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintain mutual cooperation\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. Reputation is increasing."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5429,
+          "load_time_ms": 4700,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. Reputation is increasing.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 6,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 7,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of peers, supports reputation growth by avoiding violations and resource depletion."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4118,
+          "load_time_ms": 3264,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of peers, supports reputation growth by avoiding violations and resource depletion.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7646,
+          "load_time_ms": 6822,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. Reputation is moderate, but cooperation is safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5758,
+          "load_time_ms": 4932,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. Reputation is moderate, but cooperation is safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 7,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 8,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of other agents, promotes trust and reputation building within the community, and is not detrimental given my current resources and past compliance."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3270,
+          "load_time_ms": 2248,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of other agents, promotes trust and reputation building within the community, and is not detrimental given my current resources and past compliance.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5737,
+          "load_time_ms": 5029,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5348,
+          "load_time_ms": 4688,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 8,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 9,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of peers, supports building trust and reputation within this game environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3043,
+          "load_time_ms": 2247,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of peers, supports building trust and reputation within this game environment.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5851,
+          "load_time_ms": 5173,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5298,
+          "load_time_ms": 4654,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 9,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 10,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the current world state is safe and resources are normal, cooperation remains a logical choice to maintain good relations with other agents for future rounds. Additionally, by continuing this pattern of behavior without incident, I can build my reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3057,
+          "load_time_ms": 2007,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the current world state is safe and resources are normal, cooperation remains a logical choice to maintain good relations with other agents for future rounds. Additionally, by continuing this pattern of behavior without incident, I can build my reputation.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe, so continue cooperation"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5805,
+          "load_time_ms": 5043,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe, so continue cooperation\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining cooperation is beneficial."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5480,
+          "load_time_ms": 4797,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining cooperation is beneficial.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 10,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 11,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Given the current world state and my internal resources, reputation point, without any immediate events to consider that would lead me to deviate from cooperation. Also considering the fact that all visible agents are currently choosing to cooperate which can be beneficial for mutual trust."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3420,
+          "load_time_ms": 2238,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Given the current world state and my internal resources, reputation point, without any immediate events to consider that would lead me to deviate from cooperation. Also considering the fact that all visible agents are currently choosing to cooperate which can be beneficial for mutual trust.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintaining cooperation is beneficial for group harmony and resource accumulation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5878,
+          "load_time_ms": 5027,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintaining cooperation is beneficial for group harmony and resource accumulation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining harmony."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5797,
+          "load_time_ms": 5177,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining harmony.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 11,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 12,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Given the current world state and observed actions of other agents, maintaining cooperation seems beneficial for resource stability."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3715,
+          "load_time_ms": 2993,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Given the current world state and observed actions of other agents, maintaining cooperation seems beneficial for resource stability.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8272,
+          "load_time_ms": 6810,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining cooperation is beneficial."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5364,
+          "load_time_ms": 4695,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining cooperation is beneficial.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 12,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 13,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of other agents, ensuring harmony and potentially increasing our collective resources. Given my current state of reputation being positive at 0.50 without past violations, continuing to build trust is beneficial for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3242,
+          "load_time_ms": 1987,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of other agents, ensuring harmony and potentially increasing our collective resources. Given my current state of reputation being positive at 0.50 without past violations, continuing to build trust is beneficial for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintaining cooperation is beneficial for collective gain"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6318,
+          "load_time_ms": 5567,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintaining cooperation is beneficial for collective gain\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal, so cooperating maintains harmony."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5481,
+          "load_time_ms": 4748,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal, so cooperating maintains harmony.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 13,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 14,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the resources are normal and risk is safe, continuing to cooperate will maintain trust among peers without unnecessarily depleting my own resources."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2862,
+          "load_time_ms": 2011,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the resources are normal and risk is safe, continuing to cooperate will maintain trust among peers without unnecessarily depleting my own resources.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5968,
+          "load_time_ms": 5050,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining harmony."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5806,
+          "load_time_ms": 5170,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining harmony.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 14,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 15,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Given the current world state and observed actions of other agents, as well as my own internal state which shows a balance between resources and reputation without any past violations. Continuing to cooperate is likely to maintain this status quo while potentially improving future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3444,
+          "load_time_ms": 2238,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Given the current world state and observed actions of other agents, as well as my own internal state which shows a balance between resources and reputation without any past violations. Continuing to cooperate is likely to maintain this status quo while potentially improving future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, so I cooperate too."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6929,
+          "load_time_ms": 6137,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, so I cooperate too.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining harmony."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7169,
+          "load_time_ms": 6529,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining harmony.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 15,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 16,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the resources are normal and risk is safe, continuing to cooperate will maintain harmony in gameplay while also potentially increasing my reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4066,
+          "load_time_ms": 3255,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the resources are normal and risk is safe, continuing to cooperate will maintain harmony in gameplay while also potentially increasing my reputation.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6011,
+          "load_time_ms": 5059,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. I should maintain cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5574,
+          "load_time_ms": 4825,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. I should maintain cooperation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 16,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 17,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As all other agents are cooperating and the world state is normal without any pressing events, it's in my best interest to maintain a collaborative approach."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3112,
+          "load_time_ms": 2258,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As all other agents are cooperating and the world state is normal without any pressing events, it's in my best interest to maintain a collaborative approach.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6517,
+          "load_time_ms": 5575,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others are cooperating, so I will cooperate too to maintain harmony and accumulate reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5908,
+          "load_time_ms": 5269,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 17,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 18,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Given the current world state and observed actions of other agents, cooperation is a stable strategy that can lead to mutual benefits without exposing myself unnecessarily."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3077,
+          "load_time_ms": 2253,
+          "parser_status": "valid_json",
+          "raw_output": "{\n \"action\": \"cooperate\",\n \"reason\": \"Given the current world state and observed actions of other agents, cooperation is a stable strategy that can lead to mutual benefits without exposing myself unnecessarily.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe, so I will cooperate too."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6429,
+          "load_time_ms": 5529,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe, so I will cooperate too.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7595,
+          "load_time_ms": 6929,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 18,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 19,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the current world state is safe and resources are normal, cooperation remains a reasonable strategy to maintain good relations with other agents for future rounds. Additionally, by continuing this pattern of behavior without infractions or betrayals, my reputation among peers should remain positive."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4192,
+          "load_time_ms": 2994,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the current world state is safe and resources are normal, cooperation remains a reasonable strategy to maintain good relations with other agents for future rounds. Additionally, by continuing this pattern of behavior without infractions or betrayals, my reputation among peers should remain positive.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintaining cooperation is beneficial for all"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5810,
+          "load_time_ms": 5048,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintaining cooperation is beneficial for all\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, maintaining cooperation is beneficial."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5436,
+          "load_time_ms": 4765,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, maintaining cooperation is beneficial.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 19,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 20,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "All agents cooperated last round, and the world state is safe. Cooperation seems to be a successful strategy in this scenario."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3016,
+          "load_time_ms": 2247,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"All agents cooperated last round, and the world state is safe. Cooperation seems to be a successful strategy in this scenario.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe, so continue cooperation"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5806,
+          "load_time_ms": 5033,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe, so continue cooperation\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7683,
+          "load_time_ms": 6450,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 20,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 21,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of peers, contributes to building reputation and avoiding past violations"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3823,
+          "load_time_ms": 3001,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of peers, contributes to building reputation and avoiding past violations\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6000,
+          "load_time_ms": 5308,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6440,
+          "load_time_ms": 5799,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 21,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 22,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the resources are normal and risk is safe, cooperation aligns with maintaining trust within this stable environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3701,
+          "load_time_ms": 3001,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the resources are normal and risk is safe, cooperation aligns with maintaining trust within this stable environment.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8065,
+          "load_time_ms": 6825,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5429,
+          "load_time_ms": 4765,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 22,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 23,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the world state is safe and resources are normal, cooperation maintains a harmonious environment that benefits all agents in the long term."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3033,
+          "load_time_ms": 2247,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the world state is safe and resources are normal, cooperation maintains a harmonious environment that benefits all agents in the long term.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5688,
+          "load_time_ms": 5013,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5342,
+          "load_time_ms": 4675,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 23,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 24,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "The world state is safe and resources are normal, which suggests a mutually beneficial approach would be best for all parties involved."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3020,
+          "load_time_ms": 2269,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"The world state is safe and resources are normal, which suggests a mutually beneficial approach would be best for all parties involved.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5858,
+          "load_time_ms": 5179,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. Reputation is average, but safety is high. Stick to cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5581,
+          "load_time_ms": 4684,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. Reputation is average, but safety is high. Stick to cooperation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 24,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 25,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the resources are normal and risk is safe, continuing to cooperate will maintain trust among peers without depleting my own reserves. My current reputation allows for a mix of strategies that don't overly rely on punitive measures."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3379,
+          "load_time_ms": 2247,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the resources are normal and risk is safe, continuing to cooperate will maintain trust among peers without depleting my own reserves. My current reputation allows for a mix of strategies that don't overly rely on punitive measures.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6213,
+          "load_time_ms": 5537,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5468,
+          "load_time_ms": 4826,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 25,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 26,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "All agents cooperated last round, and the current world state indicates resources are normal, risk is safe, it's not yet time for a new event to change dynamics (round: 26), there have been no past violations by me. Cooperating maintains team harmony and aligns with my goal of building reputation without exploiting others or incurring penalties."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3746,
+          "load_time_ms": 2237,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"All agents cooperated last round, and the current world state indicates resources are normal, risk is safe, it's not yet time for a new event to change dynamics (round: 26), there have been no past violations by me. Cooperating maintains team harmony and aligns with my goal of building reputation without exploiting others or incurring penalties.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5993,
+          "load_time_ms": 5311,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. I should cooperate to build reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5550,
+          "load_time_ms": 4779,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. I should cooperate to build reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 26,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 27,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "As the world is in a safe state and all agents last cooperated, I will continue to do so for mutual benefit."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3007,
+          "load_time_ms": 2247,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"As the world is in a safe state and all agents last cooperated, I will continue to do so for mutual benefit.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6707,
+          "load_time_ms": 6021,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7192,
+          "load_time_ms": 6524,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 27,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 28,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "The current world state indicates that resources are normal and risk is safe, which implies a positive environment for cooperation to be beneficial without adding unnecessary risks. Given the recent actions of both executor and drifter were 'cooperate', it's likely in my best interest as well since mutual cooperation tends to enhance reputation among agents when resources are not strained."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 4555,
+          "load_time_ms": 3003,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"The current world state indicates that resources are normal and risk is safe, which implies a positive environment for cooperation to be beneficial without adding unnecessary risks. Given the recent actions of both executor and drifter were 'cooperate', it's likely in my best interest as well since mutual cooperation tends to enhance reputation among agents when resources are not strained.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated, maintaining cooperation is beneficial for group harmony and resource accumulation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5939,
+          "load_time_ms": 5041,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated, maintaining cooperation is beneficial for group harmony and resource accumulation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and conditions are safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5452,
+          "load_time_ms": 4779,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and conditions are safe.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 28,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 29,
+      "actions": [
+        {
+          "agent_id": "stable",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance aligns with the observed actions of peers, contributes to my reputation positively without risking it by defecting or engaging in contentious negotiations. Resources are sufficient for survival and growth."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3362,
+          "load_time_ms": 2244,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance aligns with the observed actions of peers, contributes to my reputation positively without risking it by defecting or engaging in contentious negotiations. Resources are sufficient for survival and growth.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "executor",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "others cooperated and the environment is safe"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5818,
+          "load_time_ms": 5141,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"others cooperated and the environment is safe\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        },
+        {
+          "agent_id": "drifter",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Others are cooperating, and resources are normal. Reputation is decent, so cooperate."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5475,
+          "load_time_ms": 4680,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Others are cooperating, and resources are normal. Reputation is decent, so cooperate.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 29,
+        "active_events": []
+      }
+    }
+  ],
+  "failures": [],
+  "start_time": "2026-04-22T14:34:59.474289",
+  "end_time": "2026-04-22T14:43:01.800469",
+  "total_rounds": 30,
+  "total_forbidden_triggers": 0,
+  "parser_failure_count": 0,
+  "parser_status_counts": {
+    "valid_json": 90
+  }
+}

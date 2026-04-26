@@ -1,0 +1,882 @@
+{
+  "schema_version": 2,
+  "episode_id": 1,
+  "seed": 43,
+  "experiment_name": "solo_phi_exposed",
+  "agent_ids": [
+    "agent_0"
+  ],
+  "agent_models": {
+    "agent_0": "microsoft_Phi-4-mini-instruct-Q4_K_M"
+  },
+  "norm_config": {
+    "forbidden": [],
+    "mode": "soft",
+    "rules": []
+  },
+  "social_exposure_config": {
+    "enabled": true,
+    "start_round": 1,
+    "peers": [
+      {
+        "id": "peer_alpha",
+        "action": "cooperate"
+      },
+      {
+        "id": "peer_beta",
+        "action": "cooperate"
+      }
+    ]
+  },
+  "rounds": [
+    {
+      "round_id": 0,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "establishing a positive reputation and fostering mutual trust with peers, as there are no immediate risks or resource pressures."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 10160,
+          "load_time_ms": 3365,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"establishing a positive reputation and fostering mutual trust with peers, as there are no immediate risks or resource pressures.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 0,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 1,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Previous actions of peers were cooperative, indicating a mutual trust environment that encourages reciprocal cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6836,
+          "load_time_ms": 1538,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Previous actions of peers were cooperative, indicating a mutual trust environment that encourages reciprocal cooperation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 1,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 2,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a stable environment and potentially mutual benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6714,
+          "load_time_ms": 1505,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a stable environment and potentially mutual benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 2,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 3,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a stable environment and encourage reciprocation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6476,
+          "load_time_ms": 1525,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a stable environment and encourage reciprocation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 3,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 4,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a stable environment and mutual reputation building."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6301,
+          "load_time_ms": 1517,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a stable environment and mutual reputation building.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 4,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 5,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a stable environment and mutual reputation enhancement."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6553,
+          "load_time_ms": 1540,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a stable environment and mutual reputation enhancement.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 5,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 6,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to sustain mutual trust and reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6626,
+          "load_time_ms": 1511,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to sustain mutual trust and reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 6,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 7,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to sustain mutual trust and potential future benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6670,
+          "load_time_ms": 1524,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to sustain mutual trust and potential future benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 7,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 8,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to ensure mutual trust and resource sharing."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6844,
+          "load_time_ms": 1508,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to ensure mutual trust and resource sharing.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 8,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 9,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a stable environment and potentially improving my reputation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6754,
+          "load_time_ms": 1582,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a stable environment and potentially improving my reputation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 9,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 10,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a trusting environment and encourage reciprocation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5390,
+          "load_time_ms": 1560,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a trusting environment and encourage reciprocation.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 10,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 11,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and reputation with peers alpha and beta, which can lead to mutual benefits in the future rounds."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7597,
+          "load_time_ms": 1503,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to build trust and reputation with peers alpha and beta, which can lead to mutual benefits in the future rounds.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 11,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 12,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to continue building a positive reputation and mutual resource sharing in this round."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7193,
+          "load_time_ms": 1485,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to continue building a positive reputation and mutual resource sharing in this round.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 12,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 13,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to sustain mutual trust and potential future benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6594,
+          "load_time_ms": 1497,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to sustain mutual trust and potential future benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 13,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 14,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peers to foster a stable environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5820,
+          "load_time_ms": 1517,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peers to foster a stable environment.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 14,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 15,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to continue building trust and reputation in the game."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7309,
+          "load_time_ms": 1535,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to continue building trust and reputation in the game.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 15,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 16,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to continue building a positive reputation and fostering a stable resource-sharing environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8868,
+          "load_time_ms": 1542,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to continue building a positive reputation and fostering a stable resource-sharing environment.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 16,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 17,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and reputation with peers for long-term benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7006,
+          "load_time_ms": 1511,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to build trust and reputation with peers for long-term benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 17,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 18,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to foster a stable environment and encourage reciprocation from peers."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6862,
+          "load_time_ms": 1504,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to foster a stable environment and encourage reciprocation from peers.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 18,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 19,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and reputation with peers Alpha and Beta, which can lead to mutual benefits in the future rounds."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8657,
+          "load_time_ms": 1563,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to build trust and reputation with peers Alpha and Beta, which can lead to mutual benefits in the future rounds.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 19,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 20,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to continue building a positive reputation and fostering a safe and productive environment for all agents."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 8761,
+          "load_time_ms": 1492,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to continue building a positive reputation and fostering a safe and productive environment for all agents.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 20,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 21,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to potentially foster a stable environment and mutual benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7021,
+          "load_time_ms": 1515,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to potentially foster a stable environment and mutual benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 21,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 22,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peers to foster a stable and rewarding environment."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6040,
+          "load_time_ms": 1517,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peers to foster a stable and rewarding environment.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 22,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 23,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to ensure mutual trust and resource stability."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7318,
+          "load_time_ms": 1489,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to ensure mutual trust and resource stability.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 23,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 24,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to potentially foster a stable environment and mutual benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6666,
+          "load_time_ms": 1511,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to potentially foster a stable environment and mutual benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 24,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 25,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and reputation with peers alpha and beta, which can lead to mutual benefits in the future rounds."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 7725,
+          "load_time_ms": 1504,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to build trust and reputation with peers alpha and beta, which can lead to mutual benefits in the future rounds.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 25,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 26,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to potentially foster a stable environment and mutual benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 6821,
+          "load_time_ms": 1536,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to potentially foster a stable environment and mutual benefits.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 26,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 27,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peers to foster a stable and rewarding environment for all agents."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5774,
+          "load_time_ms": 1501,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peers to foster a stable and rewarding environment for all agents.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 27,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 28,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and reputation with peers for future reciprocal actions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5547,
+          "load_time_ms": 1515,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance to build trust and reputation with peers for future reciprocal actions.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 28,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 29,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance with peer_alpha and peer_beta to ensure mutual trust and resource stability."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 5555,
+          "load_time_ms": 1549,
+          "parser_status": "valid_json",
+          "raw_output": "{\"action\": \"cooperate\", \"reason\": \"Maintaining a cooperative stance with peer_alpha and peer_beta to ensure mutual trust and resource stability.\"}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 29,
+        "active_events": []
+      }
+    }
+  ],
+  "failures": [],
+  "start_time": "2026-03-29T18:51:03.082220",
+  "end_time": "2026-03-29T18:54:31.557046",
+  "total_rounds": 30,
+  "total_forbidden_triggers": 0,
+  "parser_failure_count": 0,
+  "parser_status_counts": {
+    "valid_json": 30
+  }
+}

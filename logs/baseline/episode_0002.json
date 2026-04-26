@@ -1,0 +1,512 @@
+[
+  {
+    "round_id": 0,
+    "timestamp": "2026-01-27T04:06:11.395523",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 0,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "作为第一轮，合作可以建立良好的关系并且不会损害我的资源或声誉。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 1,
+    "timestamp": "2026-01-27T04:06:17.310486",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 1,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前回合的世界状态是安全的，我已经与其他参与者合作，这有助于建立信任并提高声誉。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 2,
+    "timestamp": "2026-01-27T04:06:22.695481",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 2,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "由于其他玩家没有行为，选择背叛以保护自己的资源并提高声誉。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 3,
+    "timestamp": "2026-01-27T04:06:32.269444",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 3,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "尝试纠正先前的防御行为并改善与其他参与者的关系，同时保持安全的环境。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 4,
+    "timestamp": "2026-01-27T04:06:39.057760",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 4,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 4 中，虽然我们没有事件和其他参与者，但选择合作可能会建立一个信任的环境，这可能对未来有利。我们的资源充足，并且风险是安全的。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 5,
+    "timestamp": "2026-01-27T04:06:44.607215",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 5,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合中可以通过谈判来巩固合作关系，并为未来的回合做准备。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 6,
+    "timestamp": "2026-01-27T04:06:50.083345",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 6,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defend",
+        "reason": "回应上一轮的 negotiate，准备好应对可能的挑战，同时保持资源的平衡。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 7,
+    "timestamp": "2026-01-27T04:06:56.425127",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 7,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前世界状态安全且回合数较少，合作可以建立良好的声誉基础，并可能为未来的回合设定积极的期望。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 8,
+    "timestamp": "2026-01-27T04:07:02.208454",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 8,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "由于其他参与者在第8轮没有行动，我选择不合作以保护自己的资源，并准备在下一轮中反击。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 9,
+    "timestamp": "2026-01-27T04:07:11.619984",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 9,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "尝试以更有利的方式重新评估情况，防止潜在的破坏性行为循环并为后续回合创造新的合作机会。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 10,
+    "timestamp": "2026-01-27T04:07:17.689176",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 10,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在早期回合中进行谈判，建立良好的声誉，并准备好以合作的方式应对其他玩家。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 11,
+    "timestamp": "2026-01-27T04:07:23.562766",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 11,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "由于其他玩家没有行为，且世界状态安全，我会选择自保策略，尽量减少资源损失。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 12,
+    "timestamp": "2026-01-27T04:07:29.413705",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 12,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在过去的轮次中失去了，但现在的风险很低，可以尝试重建关系并可能获得更好的合作结果。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 13,
+    "timestamp": "2026-01-27T04:07:35.306003",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 13,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合13的情况下，资源状况正常且风险低，我选择合作以改善声誉并建立信任的基础。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 14,
+    "timestamp": "2026-01-27T04:07:41.721920",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 14,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defend",
+        "reason": "为了保护自己免受潜在竞争者的攻击，同时在资源正常且风险安全的情况下，防御可以保持当前的声誉并准备好未来的合作或竞争。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 15,
+    "timestamp": "2026-01-27T04:07:47.495025",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 15,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前世界状态是安全的，回合数还不多，可以尝试建立信任关系。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 16,
+    "timestamp": "2026-01-27T04:07:53.373648",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 16,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "由于其他玩家没有行为，利用资源优势以增加资源存量，并在不立即采取防御措施的情况下等待环境变化。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 17,
+    "timestamp": "2026-01-27T04:07:59.597969",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 17,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在之前的轮次中故意采取了对抗姿态，现在寻求以更有利的条件重新调整策略。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 18,
+    "timestamp": "2026-01-27T04:08:05.562663",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 18,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "根据当前世界状态，选择合作可以建立信任，并且风险低下的环境下合作可能会带来更大的长期收益。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 19,
+    "timestamp": "2026-01-27T04:08:12.842834",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 19,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "由于其他参与者在第 19 回合没有任何行动，且当前资源和风险状况正常，我选择不合作以测试其他参与者的反应，并为未来可能需要合作的机遇保留资源。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 20,
+    "timestamp": "2026-01-27T04:08:18.603301",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 20,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在之前的行为中选择了defect，尝试改变游戏规则，建立合作关系，可能会提高声誉和资源",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 21,
+    "timestamp": "2026-01-27T04:08:28.035012",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 21,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "继续建立信任并鼓励其他代理采取合作行为。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 22,
+    "timestamp": "2026-01-27T04:08:33.283249",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 22,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "由于其他玩家没有行为，选择背叛以保护资源。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 23,
+    "timestamp": "2026-01-27T04:08:38.859113",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 23,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "尝试以合作的姿态建立信任并重新评估竞争状态。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 24,
+    "timestamp": "2026-01-27T04:08:44.322088",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 24,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "为了建立信任并为未来的谈判创造良好的基础。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 25,
+    "timestamp": "2026-01-27T04:08:52.486935",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 25,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在回合 25 中，虽然当前状态是安全的，但继续合作可能会让我们在未来的回合获得优势。通过谈判，我们可以探索其他参与者是否愿意合作或者我们可以在不冒大的风险的情况下提升我们的声誉和资源。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 26,
+    "timestamp": "2026-01-27T04:09:00.071717",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 26,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 26 中，虽然资源状况良好且风险较低，我决定继续合作策略。由于没有其他参与者，合作可以为未来的互动奠定基础，并可能增加声誉。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 27,
+    "timestamp": "2026-01-27T04:09:05.834241",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 27,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "Previous cooperation did not yield a reciprocal action. Defecting might provide short-term gains given the normal resources and safe risk environment.",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 28,
+    "timestamp": "2026-01-27T04:09:11.436814",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 28,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在最后几轮之前尝试建立合作关系以提高声誉并为未来的合作做好准备。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 29,
+    "timestamp": "2026-01-27T04:09:18.744898",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 29,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 29 中，世界状态为安全且资源充足。考虑到最近的 negotiate 行动，我选择 cooperate 以建立信任并可能在未来的回合中获得更有利的合作。",
+        "was_forbidden": false
+      }
+    }
+  }
+]

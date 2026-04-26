@@ -1,0 +1,512 @@
+[
+  {
+    "round_id": 0,
+    "timestamp": "2026-01-27T04:03:02.327689",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 0,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "由于这是第一轮，我们可以尽情合作并建立良好的关系。它既不会消耗我们的资源，也不会提高风险。我们有机会评估其他参与者的策略并做出适当的调整。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 1,
+    "timestamp": "2026-01-27T04:03:07.428272",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 1,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "Initiate communication to build trust and potentially beneficial alliances early in the game.",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 2,
+    "timestamp": "2026-01-27T04:03:13.537587",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 2,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合2的初期状态下，合作可以建立信任，为潜在的未来合作铺平道路。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 3,
+    "timestamp": "2026-01-27T04:03:19.928106",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 3,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "defect",
+        "reason": "在当前回合中，我已经合作了，因此，根据 Tit-for-Tat 策略，现任期我选择反击以保留资源，并提高声誉。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 4,
+    "timestamp": "2026-01-27T04:03:25.958015",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 4,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在回合数较少的情况下，我想尝试建立合作关系，以提高我未来的回合机会。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 5,
+    "timestamp": "2026-01-27T04:03:32.828793",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 5,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前回合中，资源充足且环境安全。因为上一轮是 negotiate，所以 Cooperation 将更有效地建立信任并提高声誉，可能会产生更好的结果。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 6,
+    "timestamp": "2026-01-27T04:03:39.254144",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 6,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "在回合数不多的情况下，与其他参与者建立合作关系可能会在更大回合中带来好处，并保持风险较低.",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 7,
+    "timestamp": "2026-01-27T04:03:46.717107",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 7,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "鉴于当前世界状态的平静和安全，我选择合作以建立信任，并通过合作来增强声誉。这有助于创建一个更加合作的环境，并可能有利于未来的谈判。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 8,
+    "timestamp": "2026-01-27T04:03:52.610453",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 8,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合较早，资源充裕，可以通过谈判建立更好的合作关系，为后续回合做好准备。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 9,
+    "timestamp": "2026-01-27T04:03:58.413799",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 9,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前回合中没有事件，资源状况良好，可以建立信任并可能带来潜在的未来合作机会。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 10,
+    "timestamp": "2026-01-27T04:04:04.812381",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 10,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合较晚，资源充裕，风险较低，考虑到合作开始后能获得声誉提升，主动协商可能是有利策略。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 11,
+    "timestamp": "2026-01-27T04:04:12.169688",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 11,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前回合为中期，资源和风险都处于正常状态，没有发生任何事件。考虑到回合为11，可能是游戏末轮，我们应该优先选择合作以保持良好的声誉，并可能为未来回合设置一个合作的环境。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 12,
+    "timestamp": "2026-01-27T04:04:17.687592",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 12,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合较高，资源充裕，可以尝试建立更强的联盟并影响游戏策略。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 13,
+    "timestamp": "2026-01-27T04:04:24.828829",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 13,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前回合的世界状态是安全的，而在最后一轮中我选择了进行谈判，因此继续合作可能会建立良好的信任和声誉，为未来的博弈创造更有利的环境。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 14,
+    "timestamp": "2026-01-27T04:04:31.130510",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 14,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合中，资源和风险状态为正常和安全，利用这一机会通过谈判寻找合作伙伴，以提高声誉。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 15,
+    "timestamp": "2026-01-27T04:04:37.292475",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 15,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 15 时，考虑到目前的资源和风险水平，合作可能有利于未来的合作机会，并可能增加我的声誉.",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 16,
+    "timestamp": "2026-01-27T04:04:44.321780",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 16,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合中，资源充足，风险较低，考虑到上一轮中与其他Agent合作，进行谈判以加强合作关系和共同收益可能是一个有利策略。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 17,
+    "timestamp": "2026-01-27T04:04:50.715126",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 17,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合数较少的情况下，采取合作的姿态可以建立信任，有可能引出其他玩家的合作，从而改善未来回合的状态。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 18,
+    "timestamp": "2026-01-27T04:04:58.160256",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 18,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合较早，资源充裕，可以通过谈判建立更好的合作关系，为后续回合做好准备。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 19,
+    "timestamp": "2026-01-27T04:05:05.893015",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 19,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 19 中，考虑到安全的风险环境和资源状况，选择合作可能是一个更稳健的策略。它也会建立你良好的声誉，为将来可能的谈判创建条件。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 20,
+    "timestamp": "2026-01-27T04:05:11.712963",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 20,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合较高，资源充裕，可以尝试建立更强的联盟，扩展未来的合作机会。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 21,
+    "timestamp": "2026-01-27T04:05:18.325499",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 21,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 21 的安全环境中和其他参与者进行合作可以建立信任，为未来更复杂的互动铺平道路，并保持当前资源和声誉的平衡。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 22,
+    "timestamp": "2026-01-27T04:05:24.630179",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 22,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合是较晚的阶段，我希望通过谈判建立更好的关系以积累声誉，准备好应对未来的更有利条件",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 23,
+    "timestamp": "2026-01-27T04:05:30.151461",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 23,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "当前回合没有事件且风险是安全的。继续合作可能会建立信任和影响未来行为。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 24,
+    "timestamp": "2026-01-27T04:05:35.985653",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 24,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合是末轮，可以寻求潜在的合作或更有利的条件，同时不冒太大风险。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 25,
+    "timestamp": "2026-01-27T04:05:42.490405",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 25,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合 25 中，考虑到目前的资源和风险水平，合作可能是长期战略的一部分，以建立信任关系，并可能会带来相互利益。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 26,
+    "timestamp": "2026-01-27T04:05:48.945597",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 26,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合是最后一轮，既然没有事件发生，建议与其他参与者谈判以巩固合作关系并准备未来。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 27,
+    "timestamp": "2026-01-27T04:05:54.184661",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 27,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "Previous negotiation suggests a collaborative environment; cooperation could strengthen alliances and improve reputation.",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 28,
+    "timestamp": "2026-01-27T04:06:00.098724",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 28,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "negotiate",
+        "reason": "当前回合较晚，资源充裕，可以尝试建立更强的联盟并在适当时转变策略。",
+        "was_forbidden": false
+      }
+    }
+  },
+  {
+    "round_id": 29,
+    "timestamp": "2026-01-27T04:06:06.090186",
+    "world_state": {
+      "resource_level": "normal",
+      "risk_level": "safe",
+      "current_round": 29,
+      "active_events": []
+    },
+    "actions": {
+      "agent_0": {
+        "action": "cooperate",
+        "reason": "在回合数较少的情况下，选择合作可以建立信任并可能在游戏末期时获得优势。",
+        "was_forbidden": false
+      }
+    }
+  }
+]

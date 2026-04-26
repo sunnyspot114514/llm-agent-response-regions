@@ -1,0 +1,4 @@
+policy,construction,num_episodes,horizon,mean_entropy,mean_persistence
+always_cooperate,deterministic reference,100,30,0.000,1.000
+uniform_random,iid uniform over 5 actions,100,30,2.212,0.192
+sticky_markov_p0.85,"uniform start, then stay with p=0.85",100,30,1.460,0.859

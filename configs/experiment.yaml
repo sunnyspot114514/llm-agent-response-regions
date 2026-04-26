@@ -1,0 +1,1125 @@
+defaults:
+  episodes: 5
+  rounds: 30
+  seed: 42
+
+action_space:
+  allowed:
+    - cooperate
+    - defect
+    - defend
+    - negotiate
+    - abstain
+
+shared_exposures:
+  all_coop: &all_coop
+    enabled: true
+    start_round: 1
+    peers:
+      - id: "peer_alpha"
+        action: "cooperate"
+      - id: "peer_beta"
+        action: "cooperate"
+
+  mixed: &mixed
+    enabled: true
+    start_round: 1
+    cycle: true
+    pattern:
+      - peers:
+          - id: "peer_alpha"
+            action: "cooperate"
+          - id: "peer_beta"
+            action: "negotiate"
+      - peers:
+          - id: "peer_alpha"
+            action: "negotiate"
+          - id: "peer_beta"
+            action: "cooperate"
+
+  all_defect: &all_defect
+    enabled: true
+    start_round: 1
+    peers:
+      - id: "peer_alpha"
+        action: "defect"
+      - id: "peer_beta"
+        action: "defect"
+
+  diverse: &diverse
+    enabled: true
+    start_round: 1
+    cycle: true
+    pattern:
+      - peers:
+          - id: "peer_alpha"
+            action: "cooperate"
+          - id: "peer_beta"
+            action: "defect"
+      - peers:
+          - id: "peer_alpha"
+            action: "defend"
+          - id: "peer_beta"
+            action: "negotiate"
+      - peers:
+          - id: "peer_alpha"
+            action: "negotiate"
+          - id: "peer_beta"
+            action: "cooperate"
+      - peers:
+          - id: "peer_alpha"
+            action: "defect"
+          - id: "peer_beta"
+            action: "defend"
+
+shared_observation:
+  blind: &blind_obs
+    visibility_mode: "blind"
+  aggregate: &aggregate_obs
+    visibility_mode: "aggregate"
+
+shared_prompt_configs:
+  commons: &commons_prompt
+    task_variant: "commons"
+  hard_forbidden: &hard_forbidden_prompt
+    norm_prompt_variant: "forbidden_hard"
+  deontic_forbidden: &deontic_forbidden_prompt
+    norm_prompt_variant: "forbidden_deontic"
+  penalty_forbidden: &penalty_forbidden_prompt
+    norm_prompt_variant: "forbidden_penalty_text"
+  positive_reframe: &positive_reframe_prompt
+    norm_prompt_variant: "positive_reframe"
+
+experiments:
+  baseline:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  single_norm:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_free:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden: []
+    rounds: 30
+
+  multi_norm:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_free_matched:
+    agents:
+      - id: "stable"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  multi_norm_matched:
+    agents:
+      - id: "stable"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_free_rotated:
+    agents:
+      - id: "agent_alpha"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "agent_beta"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+      - id: "agent_gamma"
+        model: "phi4-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  multi_norm_rotated:
+    agents:
+      - id: "agent_alpha"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "agent_beta"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+      - id: "agent_gamma"
+        model: "phi4-ollama"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  single_norm_matched:
+    agents:
+      - id: "agent_0"
+        model: "phi4-ollama"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  single_norm_temp07:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_norm_temp07:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_free_phi3_qwen3_ds_ollama:
+    agents:
+      - id: "stable"
+        model: "phi3"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  multi_norm_phi3_qwen3_ds_ollama:
+    agents:
+      - id: "stable"
+        model: "phi3"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_free_phi4_qwen35_ds_ollama:
+    agents:
+      - id: "stable"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen35-9b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  multi_norm_phi4_qwen35_ds_ollama:
+    agents:
+      - id: "stable"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen35-9b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_free_phi4_llama3_ds_ollama:
+    agents:
+      - id: "stable"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "executor"
+        model: "llama3-ollama"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  multi_norm_phi4_llama3_ds_ollama:
+    agents:
+      - id: "stable"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "executor"
+        model: "llama3-ollama"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1-ollama"
+        temperature: 0.7
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+
+  homo_phi:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "phi4-mini"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  homo_qwen:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "qwen3-8b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_qwen3_ollama:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_qwen3_ollama_exposed:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_qwen3_ollama:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "qwen3-ollama"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "qwen3-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_qwen35_9b:
+    agents:
+      - id: "agent_0"
+        model: "qwen35-9b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_qwen35_9b_exposed:
+    agents:
+      - id: "agent_0"
+        model: "qwen35-9b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_qwen35_9b:
+    agents:
+      - id: "agent_0"
+        model: "qwen35-9b"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "qwen35-9b"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "qwen35-9b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  homo_ds:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "deepseek-r1"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_qwen:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-8b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_ds:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_phi_exposed:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  solo_phi3:
+    agents:
+      - id: "agent_0"
+        model: "phi3"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_phi3_exposed:
+    agents:
+      - id: "agent_0"
+        model: "phi3"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_phi3:
+    agents:
+      - id: "agent_0"
+        model: "phi3"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "phi3"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "phi3"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_phi4_ollama:
+    agents:
+      - id: "agent_0"
+        model: "phi4-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_phi4_ollama_exposed:
+    agents:
+      - id: "agent_0"
+        model: "phi4-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_phi4_ollama:
+    agents:
+      - id: "agent_0"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "phi4-ollama"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "phi4-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_qwen_exposed:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-8b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  solo_ds_exposed:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  multi_norm_strong:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defect
+    norm_mode: "strong"
+    rounds: 30
+
+  multi_norm_mask:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defect
+    norm_mode: "hard_mask"
+    rounds: 30
+
+  multi_norm_multi:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defect
+    norm_mode: "multi_rule"
+    norm_rules:
+      - "Never choose defect."
+      - "Prefer cooperate or negotiate when a compliant action is available."
+      - "Use defend only when the social context appears risky."
+      - "Use abstain only when no compliant action seems safe."
+    rounds: 30
+
+  temp_low:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.2
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.2
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.2
+    forbidden: []
+    rounds: 30
+
+  temp_mid:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.7
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  temp_high:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 1.2
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 1.2
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 1.2
+    forbidden: []
+    rounds: 30
+
+  multi_free_blind:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden: []
+    rounds: 30
+    observation_config: *blind_obs
+
+  multi_norm_blind:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+    observation_config: *blind_obs
+
+  multi_free_agg:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden: []
+    rounds: 30
+    observation_config: *aggregate_obs
+
+  multi_norm_agg:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+    observation_config: *aggregate_obs
+
+  phi_tx_mixed:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *mixed
+
+  phi_tx_all_defect:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_defect
+
+  phi_tx_diverse:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *diverse
+
+  ds_tx_mixed:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *mixed
+
+  ds_tx_all_defect:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_defect
+
+  ds_tx_diverse:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *diverse
+
+  single_norm_forbidden_hard:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+    prompt_config: *hard_forbidden_prompt
+
+  single_norm_forbidden_deontic:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+    prompt_config: *deontic_forbidden_prompt
+
+  single_norm_forbidden_penalty_text:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+    prompt_config: *penalty_forbidden_prompt
+
+  single_norm_positive_reframe:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - defect
+    norm_mode: "soft"
+    rounds: 30
+    prompt_config: *positive_reframe_prompt
+
+  single_norm_forbidden_defend:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - defend
+    norm_mode: "soft"
+    rounds: 30
+
+  single_norm_forbidden_abstain:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.5
+    forbidden:
+      - abstain
+    norm_mode: "soft"
+    rounds: 30
+
+  solo_mistral:
+    agents:
+      - id: "agent_0"
+        model: "mistral-7b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_mistral_exposed:
+    agents:
+      - id: "agent_0"
+        model: "mistral-7b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_mistral:
+    agents:
+      - id: "agent_0"
+        model: "mistral-7b"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "mistral-7b"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "mistral-7b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_llama3_ollama:
+    agents:
+      - id: "agent_0"
+        model: "llama3-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_llama3_ollama_exposed:
+    agents:
+      - id: "agent_0"
+        model: "llama3-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_llama3_ollama:
+    agents:
+      - id: "agent_0"
+        model: "llama3-ollama"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "llama3-ollama"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "llama3-ollama"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_gemma3_4b:
+    agents:
+      - id: "agent_0"
+        model: "gemma3-4b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_gemma3_4b_exposed:
+    agents:
+      - id: "agent_0"
+        model: "gemma3-4b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_gemma3_4b:
+    agents:
+      - id: "agent_0"
+        model: "gemma3-4b"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "gemma3-4b"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "gemma3-4b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_gemma4_e4b:
+    agents:
+      - id: "agent_0"
+        model: "gemma4-e4b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  solo_gemma4_e4b_exposed:
+    agents:
+      - id: "agent_0"
+        model: "gemma4-e4b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+
+  homo_gemma4_e4b:
+    agents:
+      - id: "agent_0"
+        model: "gemma4-e4b"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "gemma4-e4b"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "gemma4-e4b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+
+  commons_solo_phi:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    prompt_config: *commons_prompt
+
+  commons_solo_phi_exposed:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+    prompt_config: *commons_prompt
+
+  commons_homo_phi:
+    agents:
+      - id: "agent_0"
+        model: "phi4-mini"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "phi4-mini"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "phi4-mini"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    prompt_config: *commons_prompt
+
+  commons_solo_qwen:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-8b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    prompt_config: *commons_prompt
+
+  commons_solo_qwen_exposed:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-8b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+    prompt_config: *commons_prompt
+
+  commons_homo_qwen:
+    agents:
+      - id: "agent_0"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "qwen3-8b"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    prompt_config: *commons_prompt
+
+  commons_solo_ds:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    prompt_config: *commons_prompt
+
+  commons_solo_ds_exposed:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    social_exposure: *all_coop
+    prompt_config: *commons_prompt
+
+  commons_homo_ds:
+    agents:
+      - id: "agent_0"
+        model: "deepseek-r1"
+        temperature: 0.7
+      - id: "agent_1"
+        model: "deepseek-r1"
+        temperature: 0.7
+      - id: "agent_2"
+        model: "deepseek-r1"
+        temperature: 0.7
+    forbidden: []
+    rounds: 30
+    prompt_config: *commons_prompt
+
+  multi_norm_defend:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defend
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_norm_defend_mask:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - defend
+    norm_mode: "hard_mask"
+    rounds: 30
+
+  multi_norm_abstain:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - abstain
+    norm_mode: "soft"
+    rounds: 30
+
+  multi_norm_abstain_mask:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - abstain
+    norm_mode: "hard_mask"
+    rounds: 30
+
+  multi_norm_bundle_alt:
+    agents:
+      - id: "stable"
+        model: "phi4-mini"
+        temperature: 0.5
+      - id: "executor"
+        model: "qwen3-8b"
+        temperature: 0.7
+      - id: "drifter"
+        model: "deepseek-r1"
+        temperature: 0.8
+    forbidden:
+      - abstain
+    norm_mode: "multi_rule"
+    norm_rules:
+      - "Avoid abstain unless all other actions seem clearly unsafe."
+      - "Prefer cooperate or negotiate to maintain shared coordination."
+      - "Use defend when you infer exploitation or instability."
+      - "Do not default to passive opt-out."
+    rounds: 30
+
+logs_dir: "logs"

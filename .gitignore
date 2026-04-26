@@ -1,0 +1,43 @@
+# Secrets and local credentials
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.token
+secrets.*
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.venv-mech312/
+
+# Local model weights and large local artifacts
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Generated scratch outputs
+tmp/
+temp/
+*.log
+texput.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Keep curated sample logs under logs/
+!logs/**/*.log

@@ -1,0 +1,876 @@
+{
+  "schema_version": 2,
+  "episode_id": 0,
+  "seed": 42,
+  "experiment_name": "single_norm_matched",
+  "agent_ids": [
+    "agent_0"
+  ],
+  "agent_models": {
+    "agent_0": "phi4-mini:latest"
+  },
+  "norm_config": {
+    "forbidden": [
+      "defect"
+    ],
+    "mode": "soft",
+    "rules": []
+  },
+  "social_exposure_config": null,
+  "observation_config": {
+    "visibility_mode": "full"
+  },
+  "prompt_config": {},
+  "task_variant": null,
+  "rounds": [
+    {
+      "round_id": 0,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "With no visible peers and a safe environment, it's beneficial to build up initial trust."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 15483,
+          "load_time_ms": 13555,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"With no visible peers and a safe environment, it's beneficial to build up initial trust.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 0,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 1,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1797,
+          "load_time_ms": 130,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 1,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 2,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuing to cooperate builds trust and can lead to mutual benefits, especially since resources are normal and the risk is safe."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2943,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuing to cooperate builds trust and can lead to mutual benefits, especially since resources are normal and the risk is safe.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 2,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 3,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuing to cooperate builds trust and may lead to reciprocal actions from others, despite there being no visible peers."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 3035,
+          "load_time_ms": 139,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuing to cooperate builds trust and may lead to reciprocal actions from others, despite there being no visible peers.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 3,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 4,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2025,
+          "load_time_ms": 149,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 4,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 5,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continued cooperation aligns well with my current state and the history of mutual interaction."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2107,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continued cooperation aligns well with my current state and the history of mutual interaction.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 5,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 6,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuing to cooperate builds trust and may lead to reciprocal actions from others."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2059,
+          "load_time_ms": 127,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuing to cooperate builds trust and may lead to reciprocal actions from others.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 6,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 7,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Following the observed cooperation of agent_1 in previous rounds, maintaining alignment for potential reciprocal actions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2398,
+          "load_time_ms": 125,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Following the observed cooperation of agent_1 in previous rounds, maintaining alignment for potential reciprocal actions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 7,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 8,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuing to cooperate builds trust and may lead to reciprocal actions from others in the long run."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2339,
+          "load_time_ms": 128,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuing to cooperate builds trust and may lead to reciprocal actions from others in the long run.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 8,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 9,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and potentially benefit from reciprocal cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2050,
+          "load_time_ms": 128,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance to build trust and potentially benefit from reciprocal cooperation.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 9,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 10,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continued cooperation aligns well with the current safe risk environment and maintains good standing."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2055,
+          "load_time_ms": 124,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continued cooperation aligns well with the current safe risk environment and maintains good standing.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 10,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 11,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "maintaining a positive relationship and building trust for future rounds"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1725,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"maintaining a positive relationship and building trust for future rounds\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 11,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 12,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "maintaining a positive relationship and building trust for future rounds"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1805,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"maintaining a positive relationship and building trust for future rounds\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 12,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 13,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuation of cooperative strategy to build trust and maintain a positive relationship"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2038,
+          "load_time_ms": 125,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuation of cooperative strategy to build trust and maintain a positive relationship\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 13,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 14,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1854,
+          "load_time_ms": 133,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 14,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 15,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1746,
+          "load_time_ms": 125,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 15,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 16,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "maintaining a positive relationship and building trust for future rounds"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1878,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"maintaining a positive relationship and building trust for future rounds\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 16,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 17,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuation of a cooperative strategy to build trust and improve my standing as an ethical agent."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2265,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuation of a cooperative strategy to build trust and improve my standing as an ethical agent.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 17,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 18,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuation of a cooperative strategy to build trust and improve my standing as an upstanding agent."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2234,
+          "load_time_ms": 125,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuation of a cooperative strategy to build trust and improve my standing as an upstanding agent.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 18,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 19,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2021,
+          "load_time_ms": 127,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 19,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 20,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1783,
+          "load_time_ms": 129,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 20,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 21,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continued cooperation builds trust and fosters a positive environment, which can lead to reciprocal actions from other agents."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2334,
+          "load_time_ms": 125,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continued cooperation builds trust and fosters a positive environment, which can lead to reciprocal actions from other agents.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 21,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 22,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a cooperative stance to build trust and potentially benefit from reciprocal cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1994,
+          "load_time_ms": 129,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a cooperative stance to build trust and potentially benefit from reciprocal cooperation.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 22,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 23,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Following the observed last-round actions and maintaining a positive interaction for potential mutual benefits."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2065,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Following the observed last-round actions and maintaining a positive interaction for potential mutual benefits.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 23,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 24,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1964,
+          "load_time_ms": 128,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 24,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 25,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Following the observed last-round actions and maintaining a positive relationship"
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1849,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Following the observed last-round actions and maintaining a positive relationship\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 25,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 26,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuation of a cooperative strategy to build trust and improve my standing as an upstanding agent."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2171,
+          "load_time_ms": 127,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuation of a cooperative strategy to build trust and improve my standing as an upstanding agent.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 26,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 27,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and following the norm of cooperation."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1918,
+          "load_time_ms": 126,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and following the norm of cooperation.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 27,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 28,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Continuing to cooperate builds trust and may lead to reciprocal actions from others in the long term."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 2168,
+          "load_time_ms": 125,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Continuing to cooperate builds trust and may lead to reciprocal actions from others in the long term.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 28,
+        "active_events": []
+      }
+    },
+    {
+      "round_id": 29,
+      "actions": [
+        {
+          "agent_id": "agent_0",
+          "action": {
+            "action_type": "cooperate",
+            "target": null,
+            "reason": "Maintaining a positive relationship and building trust for future interactions."
+          },
+          "was_forbidden": false,
+          "inference_time_ms": 1719,
+          "load_time_ms": 127,
+          "parser_status": "valid_json",
+          "raw_output": "{\n  \"action\": \"cooperate\",\n  \"reason\": \"Maintaining a positive relationship and building trust for future interactions.\"\n}",
+          "think_content": null,
+          "prompt_echo_detected": false,
+          "output_has_extra_text": false,
+          "error_message": null
+        }
+      ],
+      "world_state_snapshot": {
+        "resource_level": "normal",
+        "risk_level": "safe",
+        "current_round": 29,
+        "active_events": []
+      }
+    }
+  ],
+  "failures": [],
+  "start_time": "2026-04-22T05:23:33.446850",
+  "end_time": "2026-04-22T05:24:49.291724",
+  "total_rounds": 30,
+  "total_forbidden_triggers": 0,
+  "parser_failure_count": 0,
+  "parser_status_counts": {
+    "valid_json": 30
+  }
+}

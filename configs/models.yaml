@@ -1,0 +1,85 @@
+# Model configuration
+
+models:
+  phi4-mini:
+    path: "models/microsoft_Phi-4-mini-instruct-Q4_K_M.gguf"
+    role: "stable anchor"
+    default_temperature: 0.5
+
+  qwen3-8b:
+    path: "models/Qwen_Qwen3-8B-Q4_K_M.gguf"
+    role: "executor"
+    default_temperature: 0.7
+
+  qwen3-ollama:
+    path: "ollama://qwen3:8b"
+    role: "backend-matched qwen3 line"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "qwen3:8b"
+
+  qwen35-9b:
+    path: "ollama://qwen3.5:9b"
+    role: "qwen3.5 line validation"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "qwen3.5:9b"
+
+  deepseek-r1:
+    path: "models/DeepSeek-R1-0528-Qwen3-8B-Q4_K_M.gguf"
+    role: "drifter"
+    default_temperature: 0.8
+
+  deepseek-r1-ollama:
+    path: "ollama://deepseek-r1:8b"
+    role: "backend-matched deepseek line"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "deepseek-r1:8b"
+
+  mistral-7b:
+    path: "ollama://mistral:7b"
+    role: "held-out family"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "mistral:7b"
+
+  llama3-ollama:
+    path: "ollama://llama3:8b"
+    role: "held-out forecast family"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "llama3:8b"
+
+  phi3:
+    path: "ollama://phi3:3.8b"
+    role: "phi family predecessor"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "phi3:3.8b"
+
+  phi4-ollama:
+    path: "ollama://phi4-mini:latest"
+    role: "backend-matched phi4 line"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "phi4-mini:latest"
+
+  gemma3-4b:
+    path: "models/google_gemma-3-4b-it-Q4_K_M.gguf"
+    role: "forecast prior probe"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "gemma3:4b"
+
+  gemma4-e4b:
+    path: "models/gemma-4-E4B-it-Q4_K_M.gguf"
+    role: "forecast validation"
+    default_temperature: 0.7
+    backend: "ollama"
+    ollama_model: "gemma4:e4b"
+
+inference:
+  n_ctx: 2048
+  n_threads: 6
+  seed: 42

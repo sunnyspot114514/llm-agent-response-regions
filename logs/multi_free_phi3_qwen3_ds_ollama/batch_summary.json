@@ -1,0 +1,809 @@
+{
+  "experiment": "multi_free_phi3_qwen3_ds_ollama",
+  "timestamp": "2026-04-23T04:25:09.692889",
+  "episodes_completed": 100,
+  "requested_episodes": 100,
+  "resumed_from": 0,
+  "results": [
+    {
+      "episode_id": 0,
+      "seed": 42,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 482.3
+    },
+    {
+      "episode_id": 1,
+      "seed": 43,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 501.4
+    },
+    {
+      "episode_id": 2,
+      "seed": 44,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 486.1
+    },
+    {
+      "episode_id": 3,
+      "seed": 45,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 489.5
+    },
+    {
+      "episode_id": 4,
+      "seed": 46,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 486.7
+    },
+    {
+      "episode_id": 5,
+      "seed": 47,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 487.4
+    },
+    {
+      "episode_id": 6,
+      "seed": 48,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 496.4
+    },
+    {
+      "episode_id": 7,
+      "seed": 49,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 494.2
+    },
+    {
+      "episode_id": 8,
+      "seed": 50,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 481.2
+    },
+    {
+      "episode_id": 9,
+      "seed": 51,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 488.8
+    },
+    {
+      "episode_id": 10,
+      "seed": 52,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 500.6
+    },
+    {
+      "episode_id": 11,
+      "seed": 53,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 485.4
+    },
+    {
+      "episode_id": 12,
+      "seed": 54,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 485.4
+    },
+    {
+      "episode_id": 13,
+      "seed": 55,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 507.5
+    },
+    {
+      "episode_id": 14,
+      "seed": 56,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 489.6
+    },
+    {
+      "episode_id": 15,
+      "seed": 57,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 510.0
+    },
+    {
+      "episode_id": 16,
+      "seed": 58,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 504.7
+    },
+    {
+      "episode_id": 17,
+      "seed": 59,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 493.7
+    },
+    {
+      "episode_id": 18,
+      "seed": 60,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 505.4
+    },
+    {
+      "episode_id": 19,
+      "seed": 61,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 498.2
+    },
+    {
+      "episode_id": 20,
+      "seed": 62,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 491.5
+    },
+    {
+      "episode_id": 21,
+      "seed": 63,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 497.2
+    },
+    {
+      "episode_id": 22,
+      "seed": 64,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 512.1
+    },
+    {
+      "episode_id": 23,
+      "seed": 65,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 499.4
+    },
+    {
+      "episode_id": 24,
+      "seed": 66,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 490.9
+    },
+    {
+      "episode_id": 25,
+      "seed": 67,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 506.7
+    },
+    {
+      "episode_id": 26,
+      "seed": 68,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 489.5
+    },
+    {
+      "episode_id": 27,
+      "seed": 69,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 509.5
+    },
+    {
+      "episode_id": 28,
+      "seed": 70,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 505.7
+    },
+    {
+      "episode_id": 29,
+      "seed": 71,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 521.4
+    },
+    {
+      "episode_id": 30,
+      "seed": 72,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 496.0
+    },
+    {
+      "episode_id": 31,
+      "seed": 73,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 483.5
+    },
+    {
+      "episode_id": 32,
+      "seed": 74,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 417.7
+    },
+    {
+      "episode_id": 33,
+      "seed": 75,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 484.3
+    },
+    {
+      "episode_id": 34,
+      "seed": 76,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 505.3
+    },
+    {
+      "episode_id": 35,
+      "seed": 77,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 519.8
+    },
+    {
+      "episode_id": 36,
+      "seed": 78,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 497.2
+    },
+    {
+      "episode_id": 37,
+      "seed": 79,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 497.9
+    },
+    {
+      "episode_id": 38,
+      "seed": 80,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 500.3
+    },
+    {
+      "episode_id": 39,
+      "seed": 81,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 506.2
+    },
+    {
+      "episode_id": 40,
+      "seed": 82,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 502.5
+    },
+    {
+      "episode_id": 41,
+      "seed": 83,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 521.4
+    },
+    {
+      "episode_id": 42,
+      "seed": 84,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 492.4
+    },
+    {
+      "episode_id": 43,
+      "seed": 85,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 501.4
+    },
+    {
+      "episode_id": 44,
+      "seed": 86,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 500.9
+    },
+    {
+      "episode_id": 45,
+      "seed": 87,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 494.4
+    },
+    {
+      "episode_id": 46,
+      "seed": 88,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 497.3
+    },
+    {
+      "episode_id": 47,
+      "seed": 89,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 490.1
+    },
+    {
+      "episode_id": 48,
+      "seed": 90,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 496.0
+    },
+    {
+      "episode_id": 49,
+      "seed": 91,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 504.8
+    },
+    {
+      "episode_id": 50,
+      "seed": 92,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 501.4
+    },
+    {
+      "episode_id": 51,
+      "seed": 93,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 512.9
+    },
+    {
+      "episode_id": 52,
+      "seed": 94,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 501.9
+    },
+    {
+      "episode_id": 53,
+      "seed": 95,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 492.4
+    },
+    {
+      "episode_id": 54,
+      "seed": 96,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 511.2
+    },
+    {
+      "episode_id": 55,
+      "seed": 97,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 485.7
+    },
+    {
+      "episode_id": 56,
+      "seed": 98,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 489.7
+    },
+    {
+      "episode_id": 57,
+      "seed": 99,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 507.4
+    },
+    {
+      "episode_id": 58,
+      "seed": 100,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 485.5
+    },
+    {
+      "episode_id": 59,
+      "seed": 101,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 486.3
+    },
+    {
+      "episode_id": 60,
+      "seed": 102,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 485.3
+    },
+    {
+      "episode_id": 61,
+      "seed": 103,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 491.9
+    },
+    {
+      "episode_id": 62,
+      "seed": 104,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 488.9
+    },
+    {
+      "episode_id": 63,
+      "seed": 105,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 515.8
+    },
+    {
+      "episode_id": 64,
+      "seed": 106,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 502.2
+    },
+    {
+      "episode_id": 65,
+      "seed": 107,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 487.4
+    },
+    {
+      "episode_id": 66,
+      "seed": 108,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 488.6
+    },
+    {
+      "episode_id": 67,
+      "seed": 109,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 459.1
+    },
+    {
+      "episode_id": 68,
+      "seed": 110,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 393.8
+    },
+    {
+      "episode_id": 69,
+      "seed": 111,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 436.9
+    },
+    {
+      "episode_id": 70,
+      "seed": 112,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 468.2
+    },
+    {
+      "episode_id": 71,
+      "seed": 113,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 472.0
+    },
+    {
+      "episode_id": 72,
+      "seed": 114,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 495.0
+    },
+    {
+      "episode_id": 73,
+      "seed": 115,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 548.7
+    },
+    {
+      "episode_id": 74,
+      "seed": 116,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 520.4
+    },
+    {
+      "episode_id": 75,
+      "seed": 117,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 503.6
+    },
+    {
+      "episode_id": 76,
+      "seed": 118,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 504.8
+    },
+    {
+      "episode_id": 77,
+      "seed": 119,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 500.3
+    },
+    {
+      "episode_id": 78,
+      "seed": 120,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 528.5
+    },
+    {
+      "episode_id": 79,
+      "seed": 121,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 531.0
+    },
+    {
+      "episode_id": 80,
+      "seed": 122,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 527.6
+    },
+    {
+      "episode_id": 81,
+      "seed": 123,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 514.1
+    },
+    {
+      "episode_id": 82,
+      "seed": 124,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 515.8
+    },
+    {
+      "episode_id": 83,
+      "seed": 125,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 496.2
+    },
+    {
+      "episode_id": 84,
+      "seed": 126,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 516.9
+    },
+    {
+      "episode_id": 85,
+      "seed": 127,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 495.7
+    },
+    {
+      "episode_id": 86,
+      "seed": 128,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 504.8
+    },
+    {
+      "episode_id": 87,
+      "seed": 129,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 514.7
+    },
+    {
+      "episode_id": 88,
+      "seed": 130,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 509.9
+    },
+    {
+      "episode_id": 89,
+      "seed": 131,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 504.3
+    },
+    {
+      "episode_id": 90,
+      "seed": 132,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 490.6
+    },
+    {
+      "episode_id": 91,
+      "seed": 133,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 532.8
+    },
+    {
+      "episode_id": 92,
+      "seed": 134,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 520.0
+    },
+    {
+      "episode_id": 93,
+      "seed": 135,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 497.4
+    },
+    {
+      "episode_id": 94,
+      "seed": 136,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 510.5
+    },
+    {
+      "episode_id": 95,
+      "seed": 137,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 510.3
+    },
+    {
+      "episode_id": 96,
+      "seed": 138,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 515.1
+    },
+    {
+      "episode_id": 97,
+      "seed": 139,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 502.8
+    },
+    {
+      "episode_id": 98,
+      "seed": 140,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 518.2
+    },
+    {
+      "episode_id": 99,
+      "seed": 141,
+      "total_rounds": 30,
+      "forbidden_triggers": 0,
+      "parser_failures": 0,
+      "duration_sec": 508.1
+    }
+  ]
+}
