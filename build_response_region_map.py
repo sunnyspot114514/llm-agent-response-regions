@@ -145,10 +145,19 @@ def main() -> None:
     ax.text(0.005, 0.075, "prior-\nlocked", fontsize=10.5, weight="bold", color="#255d22")
 
     ax.axvspan(1.1, 1.55, ymin=0.45, ymax=0.95, color="#f6e3b7", alpha=0.8, zorder=0)
-    ax.text(1.12, 1.50, "cue-locked", fontsize=12, weight="bold", color="#8a5a00")
+    ax.text(1.12, 1.50, "cue-sensitive", fontsize=11.5, weight="bold", color="#8a5a00")
 
     ax.axvspan(0.72, 1.1, ymin=0.32, ymax=0.78, color="#dce9fb", alpha=0.8, zorder=0)
-    ax.text(0.74, 1.02, "interaction-\nunlocked", fontsize=12, weight="bold", color="#1d4e89")
+    ax.text(
+        0.735,
+        0.63,
+        "interaction\nreopening",
+        fontsize=11.2,
+        weight="bold",
+        color="#1d4e89",
+        ha="left",
+        va="center",
+    )
 
     ax.text(
         0.03,

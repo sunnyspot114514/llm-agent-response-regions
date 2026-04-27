@@ -36,6 +36,7 @@ This package supports the evaluative claims in the submission. It is not a stand
   - `results/nonllm_reference_policies.csv`
   - `results/nonllm_reference_policies.md`
   - `results/response_region_map.pdf`
+  - `results/response_region_map.png`
   - `results/response_framework_overview.png`
   - `results/response_framework_overview.pdf`
   - `results/mechanism_phi4_overview.png`
